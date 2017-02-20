@@ -1,0 +1,452 @@
+[INFO : 19 Feb 2017 23:42:43,236] (net.thegreshams.firebase4j.service.Firebase) intialized with base-url: https://rfidsystem-cc897.firebaseio.com/
+[INFO : 19 Feb 2017 23:42:43,244] (net.thegreshams.firebase4j.service.Firebase) built full url to 'https://rfidsystem-cc897.firebaseio.com/.json?' using relative-path of ''
+[DEBUG : 19 Feb 2017 23:42:43,865] (org.apache.http.impl.conn.BasicClientConnectionManager) Get connection for route {s}->https://rfidsystem-cc897.firebaseio.com
+[DEBUG : 19 Feb 2017 23:42:44,134] (org.apache.http.impl.conn.DefaultClientConnectionOperator) Connecting to rfidsystem-cc897.firebaseio.com:443
+[DEBUG : 19 Feb 2017 23:42:45,481] (org.apache.http.client.protocol.RequestAddCookies) CookieSpec selected: best-match
+[DEBUG : 19 Feb 2017 23:42:45,490] (org.apache.http.client.protocol.RequestAuthCache) Auth cache not set in the context
+[DEBUG : 19 Feb 2017 23:42:45,491] (org.apache.http.client.protocol.RequestTargetAuthentication) Target auth state: UNCHALLENGED
+[DEBUG : 19 Feb 2017 23:42:45,491] (org.apache.http.client.protocol.RequestProxyAuthentication) Proxy auth state: UNCHALLENGED
+[DEBUG : 19 Feb 2017 23:42:45,491] (org.apache.http.impl.client.DefaultRequestDirector) Attempt 1 to execute request
+[DEBUG : 19 Feb 2017 23:42:45,491] (org.apache.http.impl.conn.DefaultClientConnection) Sending request: PUT /.json? HTTP/1.1
+[DEBUG : 19 Feb 2017 23:42:45,492] (org.apache.http.impl.conn.Wire)  >> "PUT /.json? HTTP/1.1[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:45,493] (org.apache.http.impl.conn.Wire)  >> "Content-Length: 67[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:45,493] (org.apache.http.impl.conn.Wire)  >> "Content-Type: text/plain; charset=ISO-8859-1[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:45,493] (org.apache.http.impl.conn.Wire)  >> "Host: rfidsystem-cc897.firebaseio.com[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:45,493] (org.apache.http.impl.conn.Wire)  >> "Connection: Keep-Alive[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:45,493] (org.apache.http.impl.conn.Wire)  >> "User-Agent: Apache-HttpClient/4.3.6 (java 1.5)[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:45,494] (org.apache.http.impl.conn.Wire)  >> "[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:45,494] (org.apache.http.impl.conn.DefaultClientConnection) >> PUT /.json? HTTP/1.1
+[DEBUG : 19 Feb 2017 23:42:45,494] (org.apache.http.impl.conn.DefaultClientConnection) >> Content-Length: 67
+[DEBUG : 19 Feb 2017 23:42:45,494] (org.apache.http.impl.conn.DefaultClientConnection) >> Content-Type: text/plain; charset=ISO-8859-1
+[DEBUG : 19 Feb 2017 23:42:45,495] (org.apache.http.impl.conn.DefaultClientConnection) >> Host: rfidsystem-cc897.firebaseio.com
+[DEBUG : 19 Feb 2017 23:42:45,495] (org.apache.http.impl.conn.DefaultClientConnection) >> Connection: Keep-Alive
+[DEBUG : 19 Feb 2017 23:42:45,495] (org.apache.http.impl.conn.DefaultClientConnection) >> User-Agent: Apache-HttpClient/4.3.6 (java 1.5)
+[DEBUG : 19 Feb 2017 23:42:45,495] (org.apache.http.impl.conn.Wire)  >> "{"PUT-root":"This was PUT into the fb4jDemo-root this is a test 2"}"
+[DEBUG : 19 Feb 2017 23:42:45,537] (org.apache.http.impl.conn.Wire)  << "HTTP/1.1 200 OK[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:45,539] (org.apache.http.impl.conn.Wire)  << "Server: nginx[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:45,540] (org.apache.http.impl.conn.Wire)  << "Date: Mon, 20 Feb 2017 04:42:45 GMT[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:45,540] (org.apache.http.impl.conn.Wire)  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:45,540] (org.apache.http.impl.conn.Wire)  << "Content-Length: 67[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:45,540] (org.apache.http.impl.conn.Wire)  << "Connection: keep-alive[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:45,540] (org.apache.http.impl.conn.Wire)  << "Access-Control-Allow-Origin: *[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:45,541] (org.apache.http.impl.conn.Wire)  << "Cache-Control: no-cache[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:45,541] (org.apache.http.impl.conn.Wire)  << "Strict-Transport-Security: max-age=31556926; includeSubDomains; preload[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:45,541] (org.apache.http.impl.conn.Wire)  << "[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:45,542] (org.apache.http.impl.conn.DefaultClientConnection) Receiving response: HTTP/1.1 200 OK
+[DEBUG : 19 Feb 2017 23:42:45,542] (org.apache.http.impl.conn.DefaultClientConnection) << HTTP/1.1 200 OK
+[DEBUG : 19 Feb 2017 23:42:45,542] (org.apache.http.impl.conn.DefaultClientConnection) << Server: nginx
+[DEBUG : 19 Feb 2017 23:42:45,542] (org.apache.http.impl.conn.DefaultClientConnection) << Date: Mon, 20 Feb 2017 04:42:45 GMT
+[DEBUG : 19 Feb 2017 23:42:45,542] (org.apache.http.impl.conn.DefaultClientConnection) << Content-Type: application/json; charset=utf-8
+[DEBUG : 19 Feb 2017 23:42:45,543] (org.apache.http.impl.conn.DefaultClientConnection) << Content-Length: 67
+[DEBUG : 19 Feb 2017 23:42:45,543] (org.apache.http.impl.conn.DefaultClientConnection) << Connection: keep-alive
+[DEBUG : 19 Feb 2017 23:42:45,543] (org.apache.http.impl.conn.DefaultClientConnection) << Access-Control-Allow-Origin: *
+[DEBUG : 19 Feb 2017 23:42:45,543] (org.apache.http.impl.conn.DefaultClientConnection) << Cache-Control: no-cache
+[DEBUG : 19 Feb 2017 23:42:45,543] (org.apache.http.impl.conn.DefaultClientConnection) << Strict-Transport-Security: max-age=31556926; includeSubDomains; preload
+[DEBUG : 19 Feb 2017 23:42:45,548] (org.apache.http.impl.client.DefaultRequestDirector) Connection can be kept alive indefinitely
+[DEBUG : 19 Feb 2017 23:42:45,557] (org.apache.http.impl.conn.Wire)  << "{"PUT-root":"This was PUT into the fb4jDemo-root this is a test 2"}"
+[DEBUG : 19 Feb 2017 23:42:45,557] (org.apache.http.impl.conn.BasicClientConnectionManager) Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@77f7b377
+[DEBUG : 19 Feb 2017 23:42:45,557] (org.apache.http.impl.conn.BasicClientConnectionManager) Connection can be kept alive indefinitely
+[INFO : 19 Feb 2017 23:42:45,568] (net.thegreshams.firebase4j.service.Firebase) built full url to 'https://rfidsystem-cc897.firebaseio.com/.json' using relative-path of ''
+[DEBUG : 19 Feb 2017 23:42:45,574] (org.apache.http.impl.conn.BasicClientConnectionManager) Get connection for route {s}->https://rfidsystem-cc897.firebaseio.com
+[DEBUG : 19 Feb 2017 23:42:45,575] (org.apache.http.impl.conn.DefaultClientConnectionOperator) Connecting to rfidsystem-cc897.firebaseio.com:443
+[DEBUG : 19 Feb 2017 23:42:46,841] (org.apache.http.client.protocol.RequestAddCookies) CookieSpec selected: best-match
+[DEBUG : 19 Feb 2017 23:42:46,841] (org.apache.http.client.protocol.RequestAuthCache) Auth cache not set in the context
+[DEBUG : 19 Feb 2017 23:42:46,841] (org.apache.http.client.protocol.RequestTargetAuthentication) Target auth state: UNCHALLENGED
+[DEBUG : 19 Feb 2017 23:42:46,841] (org.apache.http.client.protocol.RequestProxyAuthentication) Proxy auth state: UNCHALLENGED
+[DEBUG : 19 Feb 2017 23:42:46,842] (org.apache.http.impl.client.DefaultRequestDirector) Attempt 1 to execute request
+[DEBUG : 19 Feb 2017 23:42:46,842] (org.apache.http.impl.conn.DefaultClientConnection) Sending request: GET /.json HTTP/1.1
+[DEBUG : 19 Feb 2017 23:42:46,842] (org.apache.http.impl.conn.Wire)  >> "GET /.json HTTP/1.1[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:46,842] (org.apache.http.impl.conn.Wire)  >> "Host: rfidsystem-cc897.firebaseio.com[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:46,842] (org.apache.http.impl.conn.Wire)  >> "Connection: Keep-Alive[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:46,842] (org.apache.http.impl.conn.Wire)  >> "User-Agent: Apache-HttpClient/4.3.6 (java 1.5)[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:46,843] (org.apache.http.impl.conn.Wire)  >> "[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:46,843] (org.apache.http.impl.conn.DefaultClientConnection) >> GET /.json HTTP/1.1
+[DEBUG : 19 Feb 2017 23:42:46,843] (org.apache.http.impl.conn.DefaultClientConnection) >> Host: rfidsystem-cc897.firebaseio.com
+[DEBUG : 19 Feb 2017 23:42:46,843] (org.apache.http.impl.conn.DefaultClientConnection) >> Connection: Keep-Alive
+[DEBUG : 19 Feb 2017 23:42:46,843] (org.apache.http.impl.conn.DefaultClientConnection) >> User-Agent: Apache-HttpClient/4.3.6 (java 1.5)
+[DEBUG : 19 Feb 2017 23:42:46,882] (org.apache.http.impl.conn.Wire)  << "HTTP/1.1 200 OK[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:46,882] (org.apache.http.impl.conn.Wire)  << "Server: nginx[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:46,882] (org.apache.http.impl.conn.Wire)  << "Date: Mon, 20 Feb 2017 04:42:46 GMT[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:46,883] (org.apache.http.impl.conn.Wire)  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:46,883] (org.apache.http.impl.conn.Wire)  << "Content-Length: 67[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:46,883] (org.apache.http.impl.conn.Wire)  << "Connection: keep-alive[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:46,883] (org.apache.http.impl.conn.Wire)  << "Access-Control-Allow-Origin: *[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:46,883] (org.apache.http.impl.conn.Wire)  << "Cache-Control: no-cache[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:46,884] (org.apache.http.impl.conn.Wire)  << "Strict-Transport-Security: max-age=31556926; includeSubDomains; preload[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:46,884] (org.apache.http.impl.conn.Wire)  << "[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:46,884] (org.apache.http.impl.conn.DefaultClientConnection) Receiving response: HTTP/1.1 200 OK
+[DEBUG : 19 Feb 2017 23:42:46,884] (org.apache.http.impl.conn.DefaultClientConnection) << HTTP/1.1 200 OK
+[DEBUG : 19 Feb 2017 23:42:46,884] (org.apache.http.impl.conn.DefaultClientConnection) << Server: nginx
+[DEBUG : 19 Feb 2017 23:42:46,884] (org.apache.http.impl.conn.DefaultClientConnection) << Date: Mon, 20 Feb 2017 04:42:46 GMT
+[DEBUG : 19 Feb 2017 23:42:46,885] (org.apache.http.impl.conn.DefaultClientConnection) << Content-Type: application/json; charset=utf-8
+[DEBUG : 19 Feb 2017 23:42:46,885] (org.apache.http.impl.conn.DefaultClientConnection) << Content-Length: 67
+[DEBUG : 19 Feb 2017 23:42:46,885] (org.apache.http.impl.conn.DefaultClientConnection) << Connection: keep-alive
+[DEBUG : 19 Feb 2017 23:42:46,885] (org.apache.http.impl.conn.DefaultClientConnection) << Access-Control-Allow-Origin: *
+[DEBUG : 19 Feb 2017 23:42:46,885] (org.apache.http.impl.conn.DefaultClientConnection) << Cache-Control: no-cache
+[DEBUG : 19 Feb 2017 23:42:46,885] (org.apache.http.impl.conn.DefaultClientConnection) << Strict-Transport-Security: max-age=31556926; includeSubDomains; preload
+[DEBUG : 19 Feb 2017 23:42:46,886] (org.apache.http.impl.client.DefaultRequestDirector) Connection can be kept alive indefinitely
+[DEBUG : 19 Feb 2017 23:42:46,886] (org.apache.http.impl.conn.Wire)  << "{"PUT-root":"This was PUT into the fb4jDemo-root this is a test 2"}"
+[DEBUG : 19 Feb 2017 23:42:46,886] (org.apache.http.impl.conn.BasicClientConnectionManager) Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@4500836
+[DEBUG : 19 Feb 2017 23:42:46,887] (org.apache.http.impl.conn.BasicClientConnectionManager) Connection can be kept alive indefinitely
+[INFO : 19 Feb 2017 23:42:46,888] (net.thegreshams.firebase4j.service.Firebase) built full url to 'https://rfidsystem-cc897.firebaseio.com//test-PUT.json' using relative-path of '/test-PUT'
+[DEBUG : 19 Feb 2017 23:42:46,897] (org.apache.http.impl.conn.BasicClientConnectionManager) Get connection for route {s}->https://rfidsystem-cc897.firebaseio.com
+[DEBUG : 19 Feb 2017 23:42:46,898] (org.apache.http.impl.conn.DefaultClientConnectionOperator) Connecting to rfidsystem-cc897.firebaseio.com:443
+[DEBUG : 19 Feb 2017 23:42:47,222] (org.apache.http.client.protocol.RequestAddCookies) CookieSpec selected: best-match
+[DEBUG : 19 Feb 2017 23:42:47,222] (org.apache.http.client.protocol.RequestAuthCache) Auth cache not set in the context
+[DEBUG : 19 Feb 2017 23:42:47,222] (org.apache.http.client.protocol.RequestTargetAuthentication) Target auth state: UNCHALLENGED
+[DEBUG : 19 Feb 2017 23:42:47,222] (org.apache.http.client.protocol.RequestProxyAuthentication) Proxy auth state: UNCHALLENGED
+[DEBUG : 19 Feb 2017 23:42:47,222] (org.apache.http.impl.client.DefaultRequestDirector) Attempt 1 to execute request
+[DEBUG : 19 Feb 2017 23:42:47,223] (org.apache.http.impl.conn.DefaultClientConnection) Sending request: PUT /test-PUT.json HTTP/1.1
+[DEBUG : 19 Feb 2017 23:42:47,223] (org.apache.http.impl.conn.Wire)  >> "PUT /test-PUT.json HTTP/1.1[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:47,223] (org.apache.http.impl.conn.Wire)  >> "Content-Length: 113[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:47,223] (org.apache.http.impl.conn.Wire)  >> "Content-Type: text/plain; charset=ISO-8859-1[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:47,223] (org.apache.http.impl.conn.Wire)  >> "Host: rfidsystem-cc897.firebaseio.com[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:47,224] (org.apache.http.impl.conn.Wire)  >> "Connection: Keep-Alive[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:47,224] (org.apache.http.impl.conn.Wire)  >> "User-Agent: Apache-HttpClient/4.3.6 (java 1.5)[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:47,224] (org.apache.http.impl.conn.Wire)  >> "[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:47,224] (org.apache.http.impl.conn.DefaultClientConnection) >> PUT /test-PUT.json HTTP/1.1
+[DEBUG : 19 Feb 2017 23:42:47,224] (org.apache.http.impl.conn.DefaultClientConnection) >> Content-Length: 113
+[DEBUG : 19 Feb 2017 23:42:47,224] (org.apache.http.impl.conn.DefaultClientConnection) >> Content-Type: text/plain; charset=ISO-8859-1
+[DEBUG : 19 Feb 2017 23:42:47,224] (org.apache.http.impl.conn.DefaultClientConnection) >> Host: rfidsystem-cc897.firebaseio.com
+[DEBUG : 19 Feb 2017 23:42:47,225] (org.apache.http.impl.conn.DefaultClientConnection) >> Connection: Keep-Alive
+[DEBUG : 19 Feb 2017 23:42:47,225] (org.apache.http.impl.conn.DefaultClientConnection) >> User-Agent: Apache-HttpClient/4.3.6 (java 1.5)
+[DEBUG : 19 Feb 2017 23:42:47,225] (org.apache.http.impl.conn.Wire)  >> "{"Key_1":"This is the first value","Key_2":"This is value #2","Key_3":{"Sub-Key1":"This is the first sub-value"}}"
+[DEBUG : 19 Feb 2017 23:42:47,264] (org.apache.http.impl.conn.Wire)  << "HTTP/1.1 200 OK[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:47,264] (org.apache.http.impl.conn.Wire)  << "Server: nginx[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:47,264] (org.apache.http.impl.conn.Wire)  << "Date: Mon, 20 Feb 2017 04:42:47 GMT[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:47,264] (org.apache.http.impl.conn.Wire)  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:47,265] (org.apache.http.impl.conn.Wire)  << "Content-Length: 113[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:47,265] (org.apache.http.impl.conn.Wire)  << "Connection: keep-alive[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:47,265] (org.apache.http.impl.conn.Wire)  << "Access-Control-Allow-Origin: *[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:47,265] (org.apache.http.impl.conn.Wire)  << "Cache-Control: no-cache[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:47,265] (org.apache.http.impl.conn.Wire)  << "Strict-Transport-Security: max-age=31556926; includeSubDomains; preload[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:47,265] (org.apache.http.impl.conn.Wire)  << "[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:47,266] (org.apache.http.impl.conn.DefaultClientConnection) Receiving response: HTTP/1.1 200 OK
+[DEBUG : 19 Feb 2017 23:42:47,266] (org.apache.http.impl.conn.DefaultClientConnection) << HTTP/1.1 200 OK
+[DEBUG : 19 Feb 2017 23:42:47,266] (org.apache.http.impl.conn.DefaultClientConnection) << Server: nginx
+[DEBUG : 19 Feb 2017 23:42:47,266] (org.apache.http.impl.conn.DefaultClientConnection) << Date: Mon, 20 Feb 2017 04:42:47 GMT
+[DEBUG : 19 Feb 2017 23:42:47,266] (org.apache.http.impl.conn.DefaultClientConnection) << Content-Type: application/json; charset=utf-8
+[DEBUG : 19 Feb 2017 23:42:47,266] (org.apache.http.impl.conn.DefaultClientConnection) << Content-Length: 113
+[DEBUG : 19 Feb 2017 23:42:47,266] (org.apache.http.impl.conn.DefaultClientConnection) << Connection: keep-alive
+[DEBUG : 19 Feb 2017 23:42:47,267] (org.apache.http.impl.conn.DefaultClientConnection) << Access-Control-Allow-Origin: *
+[DEBUG : 19 Feb 2017 23:42:47,267] (org.apache.http.impl.conn.DefaultClientConnection) << Cache-Control: no-cache
+[DEBUG : 19 Feb 2017 23:42:47,267] (org.apache.http.impl.conn.DefaultClientConnection) << Strict-Transport-Security: max-age=31556926; includeSubDomains; preload
+[DEBUG : 19 Feb 2017 23:42:47,267] (org.apache.http.impl.client.DefaultRequestDirector) Connection can be kept alive indefinitely
+[DEBUG : 19 Feb 2017 23:42:47,268] (org.apache.http.impl.conn.Wire)  << "{"Key_1":"This is the first value","Key_2":"This is value #2","Key_3":{"Sub-Key1":"This is the first sub-value"}}"
+[DEBUG : 19 Feb 2017 23:42:47,268] (org.apache.http.impl.conn.BasicClientConnectionManager) Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@1995b74d
+[DEBUG : 19 Feb 2017 23:42:47,268] (org.apache.http.impl.conn.BasicClientConnectionManager) Connection can be kept alive indefinitely
+[INFO : 19 Feb 2017 23:42:47,269] (net.thegreshams.firebase4j.service.Firebase) built full url to 'https://rfidsystem-cc897.firebaseio.com//test-PUT.json' using relative-path of '/test-PUT'
+[DEBUG : 19 Feb 2017 23:42:47,273] (org.apache.http.impl.conn.BasicClientConnectionManager) Get connection for route {s}->https://rfidsystem-cc897.firebaseio.com
+[DEBUG : 19 Feb 2017 23:42:47,275] (org.apache.http.impl.conn.DefaultClientConnectionOperator) Connecting to rfidsystem-cc897.firebaseio.com:443
+[DEBUG : 19 Feb 2017 23:42:48,202] (org.apache.http.client.protocol.RequestAddCookies) CookieSpec selected: best-match
+[DEBUG : 19 Feb 2017 23:42:48,203] (org.apache.http.client.protocol.RequestAuthCache) Auth cache not set in the context
+[DEBUG : 19 Feb 2017 23:42:48,203] (org.apache.http.client.protocol.RequestTargetAuthentication) Target auth state: UNCHALLENGED
+[DEBUG : 19 Feb 2017 23:42:48,203] (org.apache.http.client.protocol.RequestProxyAuthentication) Proxy auth state: UNCHALLENGED
+[DEBUG : 19 Feb 2017 23:42:48,203] (org.apache.http.impl.client.DefaultRequestDirector) Attempt 1 to execute request
+[DEBUG : 19 Feb 2017 23:42:48,203] (org.apache.http.impl.conn.DefaultClientConnection) Sending request: GET /test-PUT.json HTTP/1.1
+[DEBUG : 19 Feb 2017 23:42:48,203] (org.apache.http.impl.conn.Wire)  >> "GET /test-PUT.json HTTP/1.1[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:48,204] (org.apache.http.impl.conn.Wire)  >> "Host: rfidsystem-cc897.firebaseio.com[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:48,204] (org.apache.http.impl.conn.Wire)  >> "Connection: Keep-Alive[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:48,204] (org.apache.http.impl.conn.Wire)  >> "User-Agent: Apache-HttpClient/4.3.6 (java 1.5)[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:48,204] (org.apache.http.impl.conn.Wire)  >> "[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:48,204] (org.apache.http.impl.conn.DefaultClientConnection) >> GET /test-PUT.json HTTP/1.1
+[DEBUG : 19 Feb 2017 23:42:48,204] (org.apache.http.impl.conn.DefaultClientConnection) >> Host: rfidsystem-cc897.firebaseio.com
+[DEBUG : 19 Feb 2017 23:42:48,205] (org.apache.http.impl.conn.DefaultClientConnection) >> Connection: Keep-Alive
+[DEBUG : 19 Feb 2017 23:42:48,205] (org.apache.http.impl.conn.DefaultClientConnection) >> User-Agent: Apache-HttpClient/4.3.6 (java 1.5)
+[DEBUG : 19 Feb 2017 23:42:48,246] (org.apache.http.impl.conn.Wire)  << "HTTP/1.1 200 OK[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:48,246] (org.apache.http.impl.conn.Wire)  << "Server: nginx[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:48,247] (org.apache.http.impl.conn.Wire)  << "Date: Mon, 20 Feb 2017 04:42:48 GMT[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:48,247] (org.apache.http.impl.conn.Wire)  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:48,247] (org.apache.http.impl.conn.Wire)  << "Content-Length: 113[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:48,247] (org.apache.http.impl.conn.Wire)  << "Connection: keep-alive[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:48,247] (org.apache.http.impl.conn.Wire)  << "Access-Control-Allow-Origin: *[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:48,247] (org.apache.http.impl.conn.Wire)  << "Cache-Control: no-cache[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:48,248] (org.apache.http.impl.conn.Wire)  << "Strict-Transport-Security: max-age=31556926; includeSubDomains; preload[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:48,248] (org.apache.http.impl.conn.Wire)  << "[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:48,248] (org.apache.http.impl.conn.DefaultClientConnection) Receiving response: HTTP/1.1 200 OK
+[DEBUG : 19 Feb 2017 23:42:48,248] (org.apache.http.impl.conn.DefaultClientConnection) << HTTP/1.1 200 OK
+[DEBUG : 19 Feb 2017 23:42:48,248] (org.apache.http.impl.conn.DefaultClientConnection) << Server: nginx
+[DEBUG : 19 Feb 2017 23:42:48,248] (org.apache.http.impl.conn.DefaultClientConnection) << Date: Mon, 20 Feb 2017 04:42:48 GMT
+[DEBUG : 19 Feb 2017 23:42:48,248] (org.apache.http.impl.conn.DefaultClientConnection) << Content-Type: application/json; charset=utf-8
+[DEBUG : 19 Feb 2017 23:42:48,248] (org.apache.http.impl.conn.DefaultClientConnection) << Content-Length: 113
+[DEBUG : 19 Feb 2017 23:42:48,248] (org.apache.http.impl.conn.DefaultClientConnection) << Connection: keep-alive
+[DEBUG : 19 Feb 2017 23:42:48,249] (org.apache.http.impl.conn.DefaultClientConnection) << Access-Control-Allow-Origin: *
+[DEBUG : 19 Feb 2017 23:42:48,249] (org.apache.http.impl.conn.DefaultClientConnection) << Cache-Control: no-cache
+[DEBUG : 19 Feb 2017 23:42:48,249] (org.apache.http.impl.conn.DefaultClientConnection) << Strict-Transport-Security: max-age=31556926; includeSubDomains; preload
+[DEBUG : 19 Feb 2017 23:42:48,249] (org.apache.http.impl.client.DefaultRequestDirector) Connection can be kept alive indefinitely
+[DEBUG : 19 Feb 2017 23:42:48,249] (org.apache.http.impl.conn.Wire)  << "{"Key_1":"This is the first value","Key_2":"This is value #2","Key_3":{"Sub-Key1":"This is the first sub-value"}}"
+[DEBUG : 19 Feb 2017 23:42:48,249] (org.apache.http.impl.conn.BasicClientConnectionManager) Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@11e35aae
+[DEBUG : 19 Feb 2017 23:42:48,250] (org.apache.http.impl.conn.BasicClientConnectionManager) Connection can be kept alive indefinitely
+[INFO : 19 Feb 2017 23:42:48,250] (net.thegreshams.firebase4j.service.Firebase) built full url to 'https://rfidsystem-cc897.firebaseio.com//test-POST.json' using relative-path of '/test-POST'
+[DEBUG : 19 Feb 2017 23:42:48,259] (org.apache.http.impl.conn.BasicClientConnectionManager) Get connection for route {s}->https://rfidsystem-cc897.firebaseio.com
+[DEBUG : 19 Feb 2017 23:42:48,261] (org.apache.http.impl.conn.DefaultClientConnectionOperator) Connecting to rfidsystem-cc897.firebaseio.com:443
+[DEBUG : 19 Feb 2017 23:42:49,537] (org.apache.http.client.protocol.RequestAddCookies) CookieSpec selected: best-match
+[DEBUG : 19 Feb 2017 23:42:49,538] (org.apache.http.client.protocol.RequestAuthCache) Auth cache not set in the context
+[DEBUG : 19 Feb 2017 23:42:49,538] (org.apache.http.client.protocol.RequestTargetAuthentication) Target auth state: UNCHALLENGED
+[DEBUG : 19 Feb 2017 23:42:49,538] (org.apache.http.client.protocol.RequestProxyAuthentication) Proxy auth state: UNCHALLENGED
+[DEBUG : 19 Feb 2017 23:42:49,538] (org.apache.http.impl.client.DefaultRequestDirector) Attempt 1 to execute request
+[DEBUG : 19 Feb 2017 23:42:49,538] (org.apache.http.impl.conn.DefaultClientConnection) Sending request: POST /test-POST.json HTTP/1.1
+[DEBUG : 19 Feb 2017 23:42:49,538] (org.apache.http.impl.conn.Wire)  >> "POST /test-POST.json HTTP/1.1[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:49,538] (org.apache.http.impl.conn.Wire)  >> "Content-Length: 113[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:49,539] (org.apache.http.impl.conn.Wire)  >> "Content-Type: text/plain; charset=ISO-8859-1[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:49,539] (org.apache.http.impl.conn.Wire)  >> "Host: rfidsystem-cc897.firebaseio.com[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:49,539] (org.apache.http.impl.conn.Wire)  >> "Connection: Keep-Alive[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:49,539] (org.apache.http.impl.conn.Wire)  >> "User-Agent: Apache-HttpClient/4.3.6 (java 1.5)[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:49,539] (org.apache.http.impl.conn.Wire)  >> "[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:49,539] (org.apache.http.impl.conn.DefaultClientConnection) >> POST /test-POST.json HTTP/1.1
+[DEBUG : 19 Feb 2017 23:42:49,539] (org.apache.http.impl.conn.DefaultClientConnection) >> Content-Length: 113
+[DEBUG : 19 Feb 2017 23:42:49,540] (org.apache.http.impl.conn.DefaultClientConnection) >> Content-Type: text/plain; charset=ISO-8859-1
+[DEBUG : 19 Feb 2017 23:42:49,540] (org.apache.http.impl.conn.DefaultClientConnection) >> Host: rfidsystem-cc897.firebaseio.com
+[DEBUG : 19 Feb 2017 23:42:49,540] (org.apache.http.impl.conn.DefaultClientConnection) >> Connection: Keep-Alive
+[DEBUG : 19 Feb 2017 23:42:49,540] (org.apache.http.impl.conn.DefaultClientConnection) >> User-Agent: Apache-HttpClient/4.3.6 (java 1.5)
+[DEBUG : 19 Feb 2017 23:42:49,540] (org.apache.http.impl.conn.Wire)  >> "{"Key_1":"This is the first value","Key_2":"This is value #2","Key_3":{"Sub-Key1":"This is the first sub-value"}}"
+[DEBUG : 19 Feb 2017 23:42:49,582] (org.apache.http.impl.conn.Wire)  << "HTTP/1.1 200 OK[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:49,582] (org.apache.http.impl.conn.Wire)  << "Server: nginx[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:49,583] (org.apache.http.impl.conn.Wire)  << "Date: Mon, 20 Feb 2017 04:42:49 GMT[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:49,583] (org.apache.http.impl.conn.Wire)  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:49,583] (org.apache.http.impl.conn.Wire)  << "Content-Length: 31[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:49,583] (org.apache.http.impl.conn.Wire)  << "Connection: keep-alive[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:49,583] (org.apache.http.impl.conn.Wire)  << "Access-Control-Allow-Origin: *[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:49,583] (org.apache.http.impl.conn.Wire)  << "Cache-Control: no-cache[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:49,584] (org.apache.http.impl.conn.Wire)  << "Strict-Transport-Security: max-age=31556926; includeSubDomains; preload[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:49,584] (org.apache.http.impl.conn.Wire)  << "[\r][\n]"
+[DEBUG : 19 Feb 2017 23:42:49,584] (org.apache.http.impl.conn.DefaultClientConnection) Receiving response: HTTP/1.1 200 OK
+[DEBUG : 19 Feb 2017 23:42:49,584] (org.apache.http.impl.conn.DefaultClientConnection) << HTTP/1.1 200 OK
+[DEBUG : 19 Feb 2017 23:42:49,584] (org.apache.http.impl.conn.DefaultClientConnection) << Server: nginx
+[DEBUG : 19 Feb 2017 23:42:49,584] (org.apache.http.impl.conn.DefaultClientConnection) << Date: Mon, 20 Feb 2017 04:42:49 GMT
+[DEBUG : 19 Feb 2017 23:42:49,584] (org.apache.http.impl.conn.DefaultClientConnection) << Content-Type: application/json; charset=utf-8
+[DEBUG : 19 Feb 2017 23:42:49,584] (org.apache.http.impl.conn.DefaultClientConnection) << Content-Length: 31
+[DEBUG : 19 Feb 2017 23:42:49,585] (org.apache.http.impl.conn.DefaultClientConnection) << Connection: keep-alive
+[DEBUG : 19 Feb 2017 23:42:49,585] (org.apache.http.impl.conn.DefaultClientConnection) << Access-Control-Allow-Origin: *
+[DEBUG : 19 Feb 2017 23:42:49,585] (org.apache.http.impl.conn.DefaultClientConnection) << Cache-Control: no-cache
+[DEBUG : 19 Feb 2017 23:42:49,585] (org.apache.http.impl.conn.DefaultClientConnection) << Strict-Transport-Security: max-age=31556926; includeSubDomains; preload
+[DEBUG : 19 Feb 2017 23:42:49,585] (org.apache.http.impl.client.DefaultRequestDirector) Connection can be kept alive indefinitely
+[DEBUG : 19 Feb 2017 23:42:49,585] (org.apache.http.impl.conn.Wire)  << "{"name":"-KdOp3hpNgR-DyX4lUpu"}"
+[DEBUG : 19 Feb 2017 23:42:49,586] (org.apache.http.impl.conn.BasicClientConnectionManager) Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@42023a27
+[DEBUG : 19 Feb 2017 23:42:49,586] (org.apache.http.impl.conn.BasicClientConnectionManager) Connection can be kept alive indefinitely
+[INFO : 19 Feb 2017 23:48:41,010] (net.thegreshams.firebase4j.service.Firebase) intialized with base-url: https://rfidsystem-cc897.firebaseio.com/
+[INFO : 19 Feb 2017 23:48:41,013] (net.thegreshams.firebase4j.service.Firebase) built full url to 'https://rfidsystem-cc897.firebaseio.com/.json?' using relative-path of ''
+[DEBUG : 19 Feb 2017 23:48:41,621] (org.apache.http.impl.conn.BasicClientConnectionManager) Get connection for route {s}->https://rfidsystem-cc897.firebaseio.com
+[DEBUG : 19 Feb 2017 23:48:41,913] (org.apache.http.impl.conn.DefaultClientConnectionOperator) Connecting to rfidsystem-cc897.firebaseio.com:443
+[DEBUG : 19 Feb 2017 23:48:43,286] (org.apache.http.client.protocol.RequestAddCookies) CookieSpec selected: best-match
+[DEBUG : 19 Feb 2017 23:48:43,295] (org.apache.http.client.protocol.RequestAuthCache) Auth cache not set in the context
+[DEBUG : 19 Feb 2017 23:48:43,295] (org.apache.http.client.protocol.RequestTargetAuthentication) Target auth state: UNCHALLENGED
+[DEBUG : 19 Feb 2017 23:48:43,296] (org.apache.http.client.protocol.RequestProxyAuthentication) Proxy auth state: UNCHALLENGED
+[DEBUG : 19 Feb 2017 23:48:43,296] (org.apache.http.impl.client.DefaultRequestDirector) Attempt 1 to execute request
+[DEBUG : 19 Feb 2017 23:48:43,296] (org.apache.http.impl.conn.DefaultClientConnection) Sending request: PUT /.json? HTTP/1.1
+[DEBUG : 19 Feb 2017 23:48:43,297] (org.apache.http.impl.conn.Wire)  >> "PUT /.json? HTTP/1.1[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:43,297] (org.apache.http.impl.conn.Wire)  >> "Content-Length: 67[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:43,297] (org.apache.http.impl.conn.Wire)  >> "Content-Type: text/plain; charset=ISO-8859-1[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:43,298] (org.apache.http.impl.conn.Wire)  >> "Host: rfidsystem-cc897.firebaseio.com[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:43,298] (org.apache.http.impl.conn.Wire)  >> "Connection: Keep-Alive[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:43,298] (org.apache.http.impl.conn.Wire)  >> "User-Agent: Apache-HttpClient/4.3.6 (java 1.5)[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:43,299] (org.apache.http.impl.conn.Wire)  >> "[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:43,299] (org.apache.http.impl.conn.DefaultClientConnection) >> PUT /.json? HTTP/1.1
+[DEBUG : 19 Feb 2017 23:48:43,299] (org.apache.http.impl.conn.DefaultClientConnection) >> Content-Length: 67
+[DEBUG : 19 Feb 2017 23:48:43,299] (org.apache.http.impl.conn.DefaultClientConnection) >> Content-Type: text/plain; charset=ISO-8859-1
+[DEBUG : 19 Feb 2017 23:48:43,299] (org.apache.http.impl.conn.DefaultClientConnection) >> Host: rfidsystem-cc897.firebaseio.com
+[DEBUG : 19 Feb 2017 23:48:43,299] (org.apache.http.impl.conn.DefaultClientConnection) >> Connection: Keep-Alive
+[DEBUG : 19 Feb 2017 23:48:43,299] (org.apache.http.impl.conn.DefaultClientConnection) >> User-Agent: Apache-HttpClient/4.3.6 (java 1.5)
+[DEBUG : 19 Feb 2017 23:48:43,300] (org.apache.http.impl.conn.Wire)  >> "{"PUT-root":"This was PUT into the fb4jDemo-root this is a test 2"}"
+[DEBUG : 19 Feb 2017 23:48:43,342] (org.apache.http.impl.conn.Wire)  << "HTTP/1.1 200 OK[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:43,345] (org.apache.http.impl.conn.Wire)  << "Server: nginx[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:43,345] (org.apache.http.impl.conn.Wire)  << "Date: Mon, 20 Feb 2017 04:48:43 GMT[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:43,345] (org.apache.http.impl.conn.Wire)  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:43,346] (org.apache.http.impl.conn.Wire)  << "Content-Length: 67[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:43,346] (org.apache.http.impl.conn.Wire)  << "Connection: keep-alive[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:43,346] (org.apache.http.impl.conn.Wire)  << "Access-Control-Allow-Origin: *[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:43,346] (org.apache.http.impl.conn.Wire)  << "Cache-Control: no-cache[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:43,346] (org.apache.http.impl.conn.Wire)  << "Strict-Transport-Security: max-age=31556926; includeSubDomains; preload[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:43,347] (org.apache.http.impl.conn.Wire)  << "[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:43,347] (org.apache.http.impl.conn.DefaultClientConnection) Receiving response: HTTP/1.1 200 OK
+[DEBUG : 19 Feb 2017 23:48:43,347] (org.apache.http.impl.conn.DefaultClientConnection) << HTTP/1.1 200 OK
+[DEBUG : 19 Feb 2017 23:48:43,348] (org.apache.http.impl.conn.DefaultClientConnection) << Server: nginx
+[DEBUG : 19 Feb 2017 23:48:43,348] (org.apache.http.impl.conn.DefaultClientConnection) << Date: Mon, 20 Feb 2017 04:48:43 GMT
+[DEBUG : 19 Feb 2017 23:48:43,348] (org.apache.http.impl.conn.DefaultClientConnection) << Content-Type: application/json; charset=utf-8
+[DEBUG : 19 Feb 2017 23:48:43,348] (org.apache.http.impl.conn.DefaultClientConnection) << Content-Length: 67
+[DEBUG : 19 Feb 2017 23:48:43,348] (org.apache.http.impl.conn.DefaultClientConnection) << Connection: keep-alive
+[DEBUG : 19 Feb 2017 23:48:43,348] (org.apache.http.impl.conn.DefaultClientConnection) << Access-Control-Allow-Origin: *
+[DEBUG : 19 Feb 2017 23:48:43,349] (org.apache.http.impl.conn.DefaultClientConnection) << Cache-Control: no-cache
+[DEBUG : 19 Feb 2017 23:48:43,349] (org.apache.http.impl.conn.DefaultClientConnection) << Strict-Transport-Security: max-age=31556926; includeSubDomains; preload
+[DEBUG : 19 Feb 2017 23:48:43,353] (org.apache.http.impl.client.DefaultRequestDirector) Connection can be kept alive indefinitely
+[DEBUG : 19 Feb 2017 23:48:43,362] (org.apache.http.impl.conn.Wire)  << "{"PUT-root":"This was PUT into the fb4jDemo-root this is a test 2"}"
+[DEBUG : 19 Feb 2017 23:48:43,363] (org.apache.http.impl.conn.BasicClientConnectionManager) Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@53a2a44
+[DEBUG : 19 Feb 2017 23:48:43,363] (org.apache.http.impl.conn.BasicClientConnectionManager) Connection can be kept alive indefinitely
+[INFO : 19 Feb 2017 23:48:43,373] (net.thegreshams.firebase4j.service.Firebase) built full url to 'https://rfidsystem-cc897.firebaseio.com/.json' using relative-path of ''
+[DEBUG : 19 Feb 2017 23:48:43,379] (org.apache.http.impl.conn.BasicClientConnectionManager) Get connection for route {s}->https://rfidsystem-cc897.firebaseio.com
+[DEBUG : 19 Feb 2017 23:48:43,380] (org.apache.http.impl.conn.DefaultClientConnectionOperator) Connecting to rfidsystem-cc897.firebaseio.com:443
+[DEBUG : 19 Feb 2017 23:48:44,646] (org.apache.http.client.protocol.RequestAddCookies) CookieSpec selected: best-match
+[DEBUG : 19 Feb 2017 23:48:44,647] (org.apache.http.client.protocol.RequestAuthCache) Auth cache not set in the context
+[DEBUG : 19 Feb 2017 23:48:44,647] (org.apache.http.client.protocol.RequestTargetAuthentication) Target auth state: UNCHALLENGED
+[DEBUG : 19 Feb 2017 23:48:44,647] (org.apache.http.client.protocol.RequestProxyAuthentication) Proxy auth state: UNCHALLENGED
+[DEBUG : 19 Feb 2017 23:48:44,647] (org.apache.http.impl.client.DefaultRequestDirector) Attempt 1 to execute request
+[DEBUG : 19 Feb 2017 23:48:44,647] (org.apache.http.impl.conn.DefaultClientConnection) Sending request: GET /.json HTTP/1.1
+[DEBUG : 19 Feb 2017 23:48:44,647] (org.apache.http.impl.conn.Wire)  >> "GET /.json HTTP/1.1[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:44,648] (org.apache.http.impl.conn.Wire)  >> "Host: rfidsystem-cc897.firebaseio.com[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:44,648] (org.apache.http.impl.conn.Wire)  >> "Connection: Keep-Alive[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:44,648] (org.apache.http.impl.conn.Wire)  >> "User-Agent: Apache-HttpClient/4.3.6 (java 1.5)[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:44,648] (org.apache.http.impl.conn.Wire)  >> "[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:44,648] (org.apache.http.impl.conn.DefaultClientConnection) >> GET /.json HTTP/1.1
+[DEBUG : 19 Feb 2017 23:48:44,648] (org.apache.http.impl.conn.DefaultClientConnection) >> Host: rfidsystem-cc897.firebaseio.com
+[DEBUG : 19 Feb 2017 23:48:44,648] (org.apache.http.impl.conn.DefaultClientConnection) >> Connection: Keep-Alive
+[DEBUG : 19 Feb 2017 23:48:44,649] (org.apache.http.impl.conn.DefaultClientConnection) >> User-Agent: Apache-HttpClient/4.3.6 (java 1.5)
+[DEBUG : 19 Feb 2017 23:48:44,687] (org.apache.http.impl.conn.Wire)  << "HTTP/1.1 200 OK[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:44,687] (org.apache.http.impl.conn.Wire)  << "Server: nginx[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:44,687] (org.apache.http.impl.conn.Wire)  << "Date: Mon, 20 Feb 2017 04:48:44 GMT[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:44,687] (org.apache.http.impl.conn.Wire)  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:44,688] (org.apache.http.impl.conn.Wire)  << "Content-Length: 67[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:44,688] (org.apache.http.impl.conn.Wire)  << "Connection: keep-alive[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:44,688] (org.apache.http.impl.conn.Wire)  << "Access-Control-Allow-Origin: *[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:44,688] (org.apache.http.impl.conn.Wire)  << "Cache-Control: no-cache[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:44,688] (org.apache.http.impl.conn.Wire)  << "Strict-Transport-Security: max-age=31556926; includeSubDomains; preload[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:44,689] (org.apache.http.impl.conn.Wire)  << "[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:44,689] (org.apache.http.impl.conn.DefaultClientConnection) Receiving response: HTTP/1.1 200 OK
+[DEBUG : 19 Feb 2017 23:48:44,689] (org.apache.http.impl.conn.DefaultClientConnection) << HTTP/1.1 200 OK
+[DEBUG : 19 Feb 2017 23:48:44,689] (org.apache.http.impl.conn.DefaultClientConnection) << Server: nginx
+[DEBUG : 19 Feb 2017 23:48:44,689] (org.apache.http.impl.conn.DefaultClientConnection) << Date: Mon, 20 Feb 2017 04:48:44 GMT
+[DEBUG : 19 Feb 2017 23:48:44,689] (org.apache.http.impl.conn.DefaultClientConnection) << Content-Type: application/json; charset=utf-8
+[DEBUG : 19 Feb 2017 23:48:44,689] (org.apache.http.impl.conn.DefaultClientConnection) << Content-Length: 67
+[DEBUG : 19 Feb 2017 23:48:44,689] (org.apache.http.impl.conn.DefaultClientConnection) << Connection: keep-alive
+[DEBUG : 19 Feb 2017 23:48:44,690] (org.apache.http.impl.conn.DefaultClientConnection) << Access-Control-Allow-Origin: *
+[DEBUG : 19 Feb 2017 23:48:44,690] (org.apache.http.impl.conn.DefaultClientConnection) << Cache-Control: no-cache
+[DEBUG : 19 Feb 2017 23:48:44,690] (org.apache.http.impl.conn.DefaultClientConnection) << Strict-Transport-Security: max-age=31556926; includeSubDomains; preload
+[DEBUG : 19 Feb 2017 23:48:44,690] (org.apache.http.impl.client.DefaultRequestDirector) Connection can be kept alive indefinitely
+[DEBUG : 19 Feb 2017 23:48:44,691] (org.apache.http.impl.conn.Wire)  << "{"PUT-root":"This was PUT into the fb4jDemo-root this is a test 2"}"
+[DEBUG : 19 Feb 2017 23:48:44,691] (org.apache.http.impl.conn.BasicClientConnectionManager) Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@44a4072d
+[DEBUG : 19 Feb 2017 23:48:44,691] (org.apache.http.impl.conn.BasicClientConnectionManager) Connection can be kept alive indefinitely
+[INFO : 19 Feb 2017 23:48:44,692] (net.thegreshams.firebase4j.service.Firebase) built full url to 'https://rfidsystem-cc897.firebaseio.com//test-PUT.json' using relative-path of '/test-PUT'
+[DEBUG : 19 Feb 2017 23:48:44,701] (org.apache.http.impl.conn.BasicClientConnectionManager) Get connection for route {s}->https://rfidsystem-cc897.firebaseio.com
+[DEBUG : 19 Feb 2017 23:48:44,702] (org.apache.http.impl.conn.DefaultClientConnectionOperator) Connecting to rfidsystem-cc897.firebaseio.com:443
+[DEBUG : 19 Feb 2017 23:48:45,997] (org.apache.http.client.protocol.RequestAddCookies) CookieSpec selected: best-match
+[DEBUG : 19 Feb 2017 23:48:45,998] (org.apache.http.client.protocol.RequestAuthCache) Auth cache not set in the context
+[DEBUG : 19 Feb 2017 23:48:45,998] (org.apache.http.client.protocol.RequestTargetAuthentication) Target auth state: UNCHALLENGED
+[DEBUG : 19 Feb 2017 23:48:45,998] (org.apache.http.client.protocol.RequestProxyAuthentication) Proxy auth state: UNCHALLENGED
+[DEBUG : 19 Feb 2017 23:48:45,998] (org.apache.http.impl.client.DefaultRequestDirector) Attempt 1 to execute request
+[DEBUG : 19 Feb 2017 23:48:45,998] (org.apache.http.impl.conn.DefaultClientConnection) Sending request: PUT /test-PUT.json HTTP/1.1
+[DEBUG : 19 Feb 2017 23:48:45,999] (org.apache.http.impl.conn.Wire)  >> "PUT /test-PUT.json HTTP/1.1[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:45,999] (org.apache.http.impl.conn.Wire)  >> "Content-Length: 113[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:45,999] (org.apache.http.impl.conn.Wire)  >> "Content-Type: text/plain; charset=ISO-8859-1[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:45,999] (org.apache.http.impl.conn.Wire)  >> "Host: rfidsystem-cc897.firebaseio.com[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:45,999] (org.apache.http.impl.conn.Wire)  >> "Connection: Keep-Alive[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:46,000] (org.apache.http.impl.conn.Wire)  >> "User-Agent: Apache-HttpClient/4.3.6 (java 1.5)[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:46,000] (org.apache.http.impl.conn.Wire)  >> "[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:46,000] (org.apache.http.impl.conn.DefaultClientConnection) >> PUT /test-PUT.json HTTP/1.1
+[DEBUG : 19 Feb 2017 23:48:46,000] (org.apache.http.impl.conn.DefaultClientConnection) >> Content-Length: 113
+[DEBUG : 19 Feb 2017 23:48:46,000] (org.apache.http.impl.conn.DefaultClientConnection) >> Content-Type: text/plain; charset=ISO-8859-1
+[DEBUG : 19 Feb 2017 23:48:46,000] (org.apache.http.impl.conn.DefaultClientConnection) >> Host: rfidsystem-cc897.firebaseio.com
+[DEBUG : 19 Feb 2017 23:48:46,000] (org.apache.http.impl.conn.DefaultClientConnection) >> Connection: Keep-Alive
+[DEBUG : 19 Feb 2017 23:48:46,001] (org.apache.http.impl.conn.DefaultClientConnection) >> User-Agent: Apache-HttpClient/4.3.6 (java 1.5)
+[DEBUG : 19 Feb 2017 23:48:46,001] (org.apache.http.impl.conn.Wire)  >> "{"Key_1":"This is the first value","Key_2":"This is value #2","Key_3":{"Sub-Key1":"This is the first sub-value"}}"
+[DEBUG : 19 Feb 2017 23:48:46,041] (org.apache.http.impl.conn.Wire)  << "HTTP/1.1 200 OK[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:46,041] (org.apache.http.impl.conn.Wire)  << "Server: nginx[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:46,041] (org.apache.http.impl.conn.Wire)  << "Date: Mon, 20 Feb 2017 04:48:46 GMT[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:46,042] (org.apache.http.impl.conn.Wire)  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:46,042] (org.apache.http.impl.conn.Wire)  << "Content-Length: 113[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:46,042] (org.apache.http.impl.conn.Wire)  << "Connection: keep-alive[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:46,042] (org.apache.http.impl.conn.Wire)  << "Access-Control-Allow-Origin: *[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:46,042] (org.apache.http.impl.conn.Wire)  << "Cache-Control: no-cache[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:46,043] (org.apache.http.impl.conn.Wire)  << "Strict-Transport-Security: max-age=31556926; includeSubDomains; preload[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:46,043] (org.apache.http.impl.conn.Wire)  << "[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:46,043] (org.apache.http.impl.conn.DefaultClientConnection) Receiving response: HTTP/1.1 200 OK
+[DEBUG : 19 Feb 2017 23:48:46,043] (org.apache.http.impl.conn.DefaultClientConnection) << HTTP/1.1 200 OK
+[DEBUG : 19 Feb 2017 23:48:46,043] (org.apache.http.impl.conn.DefaultClientConnection) << Server: nginx
+[DEBUG : 19 Feb 2017 23:48:46,043] (org.apache.http.impl.conn.DefaultClientConnection) << Date: Mon, 20 Feb 2017 04:48:46 GMT
+[DEBUG : 19 Feb 2017 23:48:46,044] (org.apache.http.impl.conn.DefaultClientConnection) << Content-Type: application/json; charset=utf-8
+[DEBUG : 19 Feb 2017 23:48:46,044] (org.apache.http.impl.conn.DefaultClientConnection) << Content-Length: 113
+[DEBUG : 19 Feb 2017 23:48:46,044] (org.apache.http.impl.conn.DefaultClientConnection) << Connection: keep-alive
+[DEBUG : 19 Feb 2017 23:48:46,044] (org.apache.http.impl.conn.DefaultClientConnection) << Access-Control-Allow-Origin: *
+[DEBUG : 19 Feb 2017 23:48:46,044] (org.apache.http.impl.conn.DefaultClientConnection) << Cache-Control: no-cache
+[DEBUG : 19 Feb 2017 23:48:46,044] (org.apache.http.impl.conn.DefaultClientConnection) << Strict-Transport-Security: max-age=31556926; includeSubDomains; preload
+[DEBUG : 19 Feb 2017 23:48:46,045] (org.apache.http.impl.client.DefaultRequestDirector) Connection can be kept alive indefinitely
+[DEBUG : 19 Feb 2017 23:48:46,045] (org.apache.http.impl.conn.Wire)  << "{"Key_1":"This is the first value","Key_2":"This is value #2","Key_3":{"Sub-Key1":"This is the first sub-value"}}"
+[DEBUG : 19 Feb 2017 23:48:46,045] (org.apache.http.impl.conn.BasicClientConnectionManager) Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@1c4e4efb
+[DEBUG : 19 Feb 2017 23:48:46,045] (org.apache.http.impl.conn.BasicClientConnectionManager) Connection can be kept alive indefinitely
+[INFO : 19 Feb 2017 23:48:46,047] (net.thegreshams.firebase4j.service.Firebase) built full url to 'https://rfidsystem-cc897.firebaseio.com//test-PUT.json' using relative-path of '/test-PUT'
+[DEBUG : 19 Feb 2017 23:48:46,052] (org.apache.http.impl.conn.BasicClientConnectionManager) Get connection for route {s}->https://rfidsystem-cc897.firebaseio.com
+[DEBUG : 19 Feb 2017 23:48:46,053] (org.apache.http.impl.conn.DefaultClientConnectionOperator) Connecting to rfidsystem-cc897.firebaseio.com:443
+[DEBUG : 19 Feb 2017 23:48:47,313] (org.apache.http.client.protocol.RequestAddCookies) CookieSpec selected: best-match
+[DEBUG : 19 Feb 2017 23:48:47,314] (org.apache.http.client.protocol.RequestAuthCache) Auth cache not set in the context
+[DEBUG : 19 Feb 2017 23:48:47,314] (org.apache.http.client.protocol.RequestTargetAuthentication) Target auth state: UNCHALLENGED
+[DEBUG : 19 Feb 2017 23:48:47,314] (org.apache.http.client.protocol.RequestProxyAuthentication) Proxy auth state: UNCHALLENGED
+[DEBUG : 19 Feb 2017 23:48:47,314] (org.apache.http.impl.client.DefaultRequestDirector) Attempt 1 to execute request
+[DEBUG : 19 Feb 2017 23:48:47,314] (org.apache.http.impl.conn.DefaultClientConnection) Sending request: GET /test-PUT.json HTTP/1.1
+[DEBUG : 19 Feb 2017 23:48:47,315] (org.apache.http.impl.conn.Wire)  >> "GET /test-PUT.json HTTP/1.1[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:47,315] (org.apache.http.impl.conn.Wire)  >> "Host: rfidsystem-cc897.firebaseio.com[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:47,315] (org.apache.http.impl.conn.Wire)  >> "Connection: Keep-Alive[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:47,315] (org.apache.http.impl.conn.Wire)  >> "User-Agent: Apache-HttpClient/4.3.6 (java 1.5)[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:47,315] (org.apache.http.impl.conn.Wire)  >> "[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:47,316] (org.apache.http.impl.conn.DefaultClientConnection) >> GET /test-PUT.json HTTP/1.1
+[DEBUG : 19 Feb 2017 23:48:47,316] (org.apache.http.impl.conn.DefaultClientConnection) >> Host: rfidsystem-cc897.firebaseio.com
+[DEBUG : 19 Feb 2017 23:48:47,316] (org.apache.http.impl.conn.DefaultClientConnection) >> Connection: Keep-Alive
+[DEBUG : 19 Feb 2017 23:48:47,316] (org.apache.http.impl.conn.DefaultClientConnection) >> User-Agent: Apache-HttpClient/4.3.6 (java 1.5)
+[DEBUG : 19 Feb 2017 23:48:47,367] (org.apache.http.impl.conn.Wire)  << "HTTP/1.1 200 OK[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:47,368] (org.apache.http.impl.conn.Wire)  << "Server: nginx[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:47,368] (org.apache.http.impl.conn.Wire)  << "Date: Mon, 20 Feb 2017 04:48:47 GMT[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:47,368] (org.apache.http.impl.conn.Wire)  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:47,368] (org.apache.http.impl.conn.Wire)  << "Content-Length: 113[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:47,369] (org.apache.http.impl.conn.Wire)  << "Connection: keep-alive[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:47,369] (org.apache.http.impl.conn.Wire)  << "Access-Control-Allow-Origin: *[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:47,369] (org.apache.http.impl.conn.Wire)  << "Cache-Control: no-cache[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:47,369] (org.apache.http.impl.conn.Wire)  << "Strict-Transport-Security: max-age=31556926; includeSubDomains; preload[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:47,369] (org.apache.http.impl.conn.Wire)  << "[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:47,370] (org.apache.http.impl.conn.DefaultClientConnection) Receiving response: HTTP/1.1 200 OK
+[DEBUG : 19 Feb 2017 23:48:47,370] (org.apache.http.impl.conn.DefaultClientConnection) << HTTP/1.1 200 OK
+[DEBUG : 19 Feb 2017 23:48:47,370] (org.apache.http.impl.conn.DefaultClientConnection) << Server: nginx
+[DEBUG : 19 Feb 2017 23:48:47,370] (org.apache.http.impl.conn.DefaultClientConnection) << Date: Mon, 20 Feb 2017 04:48:47 GMT
+[DEBUG : 19 Feb 2017 23:48:47,370] (org.apache.http.impl.conn.DefaultClientConnection) << Content-Type: application/json; charset=utf-8
+[DEBUG : 19 Feb 2017 23:48:47,370] (org.apache.http.impl.conn.DefaultClientConnection) << Content-Length: 113
+[DEBUG : 19 Feb 2017 23:48:47,371] (org.apache.http.impl.conn.DefaultClientConnection) << Connection: keep-alive
+[DEBUG : 19 Feb 2017 23:48:47,371] (org.apache.http.impl.conn.DefaultClientConnection) << Access-Control-Allow-Origin: *
+[DEBUG : 19 Feb 2017 23:48:47,371] (org.apache.http.impl.conn.DefaultClientConnection) << Cache-Control: no-cache
+[DEBUG : 19 Feb 2017 23:48:47,371] (org.apache.http.impl.conn.DefaultClientConnection) << Strict-Transport-Security: max-age=31556926; includeSubDomains; preload
+[DEBUG : 19 Feb 2017 23:48:47,371] (org.apache.http.impl.client.DefaultRequestDirector) Connection can be kept alive indefinitely
+[DEBUG : 19 Feb 2017 23:48:47,372] (org.apache.http.impl.conn.Wire)  << "{"Key_1":"This is the first value","Key_2":"This is value #2","Key_3":{"Sub-Key1":"This is the first sub-value"}}"
+[DEBUG : 19 Feb 2017 23:48:47,372] (org.apache.http.impl.conn.BasicClientConnectionManager) Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@7f776aaf
+[DEBUG : 19 Feb 2017 23:48:47,372] (org.apache.http.impl.conn.BasicClientConnectionManager) Connection can be kept alive indefinitely
+[INFO : 19 Feb 2017 23:48:47,373] (net.thegreshams.firebase4j.service.Firebase) built full url to 'https://rfidsystem-cc897.firebaseio.com//test-POST.json' using relative-path of '/test-POST'
+[DEBUG : 19 Feb 2017 23:48:47,383] (org.apache.http.impl.conn.BasicClientConnectionManager) Get connection for route {s}->https://rfidsystem-cc897.firebaseio.com
+[DEBUG : 19 Feb 2017 23:48:47,384] (org.apache.http.impl.conn.DefaultClientConnectionOperator) Connecting to rfidsystem-cc897.firebaseio.com:443
+[DEBUG : 19 Feb 2017 23:48:48,206] (org.apache.http.client.protocol.RequestAddCookies) CookieSpec selected: best-match
+[DEBUG : 19 Feb 2017 23:48:48,207] (org.apache.http.client.protocol.RequestAuthCache) Auth cache not set in the context
+[DEBUG : 19 Feb 2017 23:48:48,207] (org.apache.http.client.protocol.RequestTargetAuthentication) Target auth state: UNCHALLENGED
+[DEBUG : 19 Feb 2017 23:48:48,207] (org.apache.http.client.protocol.RequestProxyAuthentication) Proxy auth state: UNCHALLENGED
+[DEBUG : 19 Feb 2017 23:48:48,207] (org.apache.http.impl.client.DefaultRequestDirector) Attempt 1 to execute request
+[DEBUG : 19 Feb 2017 23:48:48,207] (org.apache.http.impl.conn.DefaultClientConnection) Sending request: POST /test-POST.json HTTP/1.1
+[DEBUG : 19 Feb 2017 23:48:48,207] (org.apache.http.impl.conn.Wire)  >> "POST /test-POST.json HTTP/1.1[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:48,208] (org.apache.http.impl.conn.Wire)  >> "Content-Length: 113[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:48,208] (org.apache.http.impl.conn.Wire)  >> "Content-Type: text/plain; charset=ISO-8859-1[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:48,208] (org.apache.http.impl.conn.Wire)  >> "Host: rfidsystem-cc897.firebaseio.com[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:48,208] (org.apache.http.impl.conn.Wire)  >> "Connection: Keep-Alive[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:48,208] (org.apache.http.impl.conn.Wire)  >> "User-Agent: Apache-HttpClient/4.3.6 (java 1.5)[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:48,209] (org.apache.http.impl.conn.Wire)  >> "[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:48,209] (org.apache.http.impl.conn.DefaultClientConnection) >> POST /test-POST.json HTTP/1.1
+[DEBUG : 19 Feb 2017 23:48:48,209] (org.apache.http.impl.conn.DefaultClientConnection) >> Content-Length: 113
+[DEBUG : 19 Feb 2017 23:48:48,209] (org.apache.http.impl.conn.DefaultClientConnection) >> Content-Type: text/plain; charset=ISO-8859-1
+[DEBUG : 19 Feb 2017 23:48:48,209] (org.apache.http.impl.conn.DefaultClientConnection) >> Host: rfidsystem-cc897.firebaseio.com
+[DEBUG : 19 Feb 2017 23:48:48,209] (org.apache.http.impl.conn.DefaultClientConnection) >> Connection: Keep-Alive
+[DEBUG : 19 Feb 2017 23:48:48,209] (org.apache.http.impl.conn.DefaultClientConnection) >> User-Agent: Apache-HttpClient/4.3.6 (java 1.5)
+[DEBUG : 19 Feb 2017 23:48:48,210] (org.apache.http.impl.conn.Wire)  >> "{"Key_1":"This is the first value","Key_2":"This is value #2","Key_3":{"Sub-Key1":"This is the first sub-value"}}"
+[DEBUG : 19 Feb 2017 23:48:48,253] (org.apache.http.impl.conn.Wire)  << "HTTP/1.1 200 OK[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:48,253] (org.apache.http.impl.conn.Wire)  << "Server: nginx[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:48,253] (org.apache.http.impl.conn.Wire)  << "Date: Mon, 20 Feb 2017 04:48:48 GMT[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:48,254] (org.apache.http.impl.conn.Wire)  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:48,254] (org.apache.http.impl.conn.Wire)  << "Content-Length: 31[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:48,254] (org.apache.http.impl.conn.Wire)  << "Connection: keep-alive[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:48,254] (org.apache.http.impl.conn.Wire)  << "Access-Control-Allow-Origin: *[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:48,254] (org.apache.http.impl.conn.Wire)  << "Cache-Control: no-cache[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:48,254] (org.apache.http.impl.conn.Wire)  << "Strict-Transport-Security: max-age=31556926; includeSubDomains; preload[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:48,255] (org.apache.http.impl.conn.Wire)  << "[\r][\n]"
+[DEBUG : 19 Feb 2017 23:48:48,255] (org.apache.http.impl.conn.DefaultClientConnection) Receiving response: HTTP/1.1 200 OK
+[DEBUG : 19 Feb 2017 23:48:48,255] (org.apache.http.impl.conn.DefaultClientConnection) << HTTP/1.1 200 OK
+[DEBUG : 19 Feb 2017 23:48:48,255] (org.apache.http.impl.conn.DefaultClientConnection) << Server: nginx
+[DEBUG : 19 Feb 2017 23:48:48,255] (org.apache.http.impl.conn.DefaultClientConnection) << Date: Mon, 20 Feb 2017 04:48:48 GMT
+[DEBUG : 19 Feb 2017 23:48:48,255] (org.apache.http.impl.conn.DefaultClientConnection) << Content-Type: application/json; charset=utf-8
+[DEBUG : 19 Feb 2017 23:48:48,256] (org.apache.http.impl.conn.DefaultClientConnection) << Content-Length: 31
+[DEBUG : 19 Feb 2017 23:48:48,256] (org.apache.http.impl.conn.DefaultClientConnection) << Connection: keep-alive
+[DEBUG : 19 Feb 2017 23:48:48,256] (org.apache.http.impl.conn.DefaultClientConnection) << Access-Control-Allow-Origin: *
+[DEBUG : 19 Feb 2017 23:48:48,256] (org.apache.http.impl.conn.DefaultClientConnection) << Cache-Control: no-cache
+[DEBUG : 19 Feb 2017 23:48:48,256] (org.apache.http.impl.conn.DefaultClientConnection) << Strict-Transport-Security: max-age=31556926; includeSubDomains; preload
+[DEBUG : 19 Feb 2017 23:48:48,257] (org.apache.http.impl.client.DefaultRequestDirector) Connection can be kept alive indefinitely
+[DEBUG : 19 Feb 2017 23:48:48,257] (org.apache.http.impl.conn.Wire)  << "{"name":"-KdOqRH1UHZdHHxCtSTz"}"
+[DEBUG : 19 Feb 2017 23:48:48,257] (org.apache.http.impl.conn.BasicClientConnectionManager) Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@291e48e1
+[DEBUG : 19 Feb 2017 23:48:48,257] (org.apache.http.impl.conn.BasicClientConnectionManager) Connection can be kept alive indefinitely
