@@ -19,6 +19,7 @@ import org.apache.log4j.Logger;
 public class FirebaseConnection {
 
     protected static final Logger LOGGER = Logger.getRootLogger();
+    static FirebaseResponse response = null;
 
     FirebaseConnection(){
         System.out.println("This is a firebase connection");
@@ -44,22 +45,19 @@ public class FirebaseConnection {
         Firebase firebase = new Firebase( firebase_baseUrl );
 
 
-//        // "DELETE" (the fb4jDemo-root)
-//        FirebaseResponse response = firebase.delete();
-
 
         // "PUT" (test-map into the fb4jDemo-root)
         Map<String, Object> dataMap = new LinkedHashMap<String, Object>();
-        dataMap.put( "PUT-root", "This was PUT into the fb4jDemo-root this is a test 2" );
-        FirebaseResponse response = firebase.put( dataMap );
-        System.out.println( "\n\nResult of PUT (for the test-PUT to fb4jDemo-root):\n" + response );
-        System.out.println("\n");
-
-
-        // "GET" (the fb4jDemo-root)
-        response = firebase.get();
-        System.out.println( "\n\nResult of GET:\n" + response );
-        System.out.println("\n");
+//        dataMap.put( "PUT-root1", "This was PUT into the demo this is a test 1" );
+//        response = firebase.put( dataMap );
+//        System.out.println( "\nResult of PUT (for the test-PUT to demo):\n" + response );
+//        System.out.println("\n");
+//
+//
+//        // "GET" (the fb4jDemo-root)
+//        response = firebase.get();
+//        System.out.println( "\n\nResult of GET:\n" + response );
+//        System.out.println("\n");
 
 
         // "PUT" (test-map into a sub-node off of the fb4jDemo-root)
@@ -69,19 +67,19 @@ public class FirebaseConnection {
         Map<String, Object> dataMap2 = new LinkedHashMap<String, Object>();
         dataMap2.put( "Sub-Key1", "This is the first sub-value" );
         dataMap.put( "Key_3", dataMap2 );
-        response = firebase.put( "test-PUT", dataMap );
-        System.out.println( "\n\nResult of PUT (for the test-PUT):\n" + response );
-        System.out.println("\n");
-
-
-        // "GET" (the test-PUT)
-        response = firebase.get( "test-PUT" );
-        System.out.println( "\n\nResult of GET (for the test-PUT):\n" + response );
-        System.out.println("\n");
+//        response = firebase.put( "test-PUT", dataMap );
+//        System.out.println( "\n\nResult of PUT (for the test-PUT):\n" + response );
+//        System.out.println("\n");
+//
+//
+//        // "GET" (the test-PUT)
+//        response = firebase.get( "test-PUT" );
+//        System.out.println( "\n\nResult of GET (for the test-PUT):\n" + response );
+//        System.out.println("\n");
 
 
         // "POST" (test-map into a sub-node off of the fb4jDemo-root)
-        response = firebase.post( "test-POST", dataMap );
+        response = firebase.post( "test-POST2", dataMap );
         System.out.println( "\n\nResult of POST (for the test-POST):\n" + response );
         System.out.println("\n");
 
