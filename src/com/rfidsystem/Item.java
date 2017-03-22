@@ -5,9 +5,9 @@ import java.util.ArrayList;
 /**
  * Created by yordan on 3/22/17.
  */
-public class item {
+public class Item {
 
-    private uid String;
+    private String uid;
     private ArrayList<PickUps> pickUps = new ArrayList<PickUps>();
 
 }

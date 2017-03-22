@@ -10,7 +10,7 @@ import com.thingmagic.*;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class readAsync
+public class ReadAsync
 {
     static SerialPrinter serialPrinter;
     static StringPrinter stringPrinter;
