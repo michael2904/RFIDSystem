@@ -1476,3 +1476,13 @@ FirebaseResponse[ (Success:true) (Code:200) (Body:{name=-KdOtkBb8YCWw5ID1crM}) (
 [DEBUG : 20 Feb 2017 00:16:53,000] (org.apache.http.impl.conn.Wire)  << "{"name":"-KdOwr_sTChieP6pwU7k"}"
 [DEBUG : 20 Feb 2017 00:16:53,000] (org.apache.http.impl.conn.BasicClientConnectionManager) Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@38925faf
 [DEBUG : 20 Feb 2017 00:16:53,000] (org.apache.http.impl.conn.BasicClientConnectionManager) Connection can be kept alive indefinitely
+[INFO : 22 Mar 2017 17:50:48,671] (net.thegreshams.firebase4j.service.Firebase) intialized with base-url: https://rfidsystem-cc897.firebaseio.com/
+[INFO : 22 Mar 2017 17:50:48,676] (net.thegreshams.firebase4j.service.Firebase) built full url to 'https://rfidsystem-cc897.firebaseio.com//test-POST2.json?' using relative-path of '/test-POST2'
+[DEBUG : 22 Mar 2017 17:50:49,805] (org.apache.http.impl.conn.BasicClientConnectionManager) Get connection for route {s}->https://rfidsystem-cc897.firebaseio.com
+[DEBUG : 22 Mar 2017 17:50:49,958] (org.apache.http.impl.conn.DefaultClientConnectionOperator) Connecting to rfidsystem-cc897.firebaseio.com:443
+[DEBUG : 22 Mar 2017 17:50:49,959] (org.apache.http.impl.conn.DefaultClientConnectionOperator) Connect to rfidsystem-cc897.firebaseio.com:443 timed out. Connection will be retried using another IP address
+[DEBUG : 22 Mar 2017 17:50:49,969] (org.apache.http.impl.conn.DefaultClientConnectionOperator) Connecting to rfidsystem-cc897.firebaseio.com:443
+[DEBUG : 22 Mar 2017 17:50:49,970] (org.apache.http.impl.conn.DefaultClientConnection) Connection org.apache.http.impl.conn.DefaultClientConnection@4575b933 closed
+[DEBUG : 22 Mar 2017 17:50:49,970] (org.apache.http.impl.conn.DefaultClientConnection) Connection org.apache.http.impl.conn.DefaultClientConnection@4575b933 shut down
+[DEBUG : 22 Mar 2017 17:50:49,971] (org.apache.http.impl.conn.BasicClientConnectionManager) Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@33d1e6e5
+[ERROR : 22 Mar 2017 17:50:49,972] (net.thegreshams.firebase4j.service.Firebase) unable to receive response from request(POST) @ https://rfidsystem-cc897.firebaseio.com//test-POST2.json?

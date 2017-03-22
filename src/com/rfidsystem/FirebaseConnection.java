@@ -18,14 +18,14 @@ import org.apache.log4j.Logger;
 
 public class FirebaseConnection {
 
-    protected static final Logger LOGGER = Logger.getRootLogger();
+    protected final Logger LOGGER = Logger.getRootLogger();
     static FirebaseResponse response = null;
 
     FirebaseConnection(){
         System.out.println("This is a firebase connection");
     }
 
-    public static void main(String[] args) throws FirebaseException, JsonParseException, JsonMappingException, IOException, JacksonUtilityException {
+    public void base(String[] args) throws FirebaseException, JsonParseException, JsonMappingException, IOException, JacksonUtilityException {
 	// write your code here
         // get the base-url (ie: 'http://gamma.firebase.com/username')
         String firebase_baseUrl = "https://rfidsystem-cc897.firebaseio.com/";
