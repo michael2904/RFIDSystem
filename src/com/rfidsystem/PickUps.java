@@ -1,18 +1,32 @@
 package com.rfidsystem;
 
+import java.util.Calendar;
+
 /**
  * Created by michaelAM on 2017-03-22.
  */
 public class PickUps {
 
+    private Item item;
     private long startTime;
     private long endTime;
     private long duration;
+    private int day;
+    private int month;
+    private int year;
 
-    public PickUps(long startTime, long endTime){
+    public PickUps(long startTime, long endTime,Item item){
+        this.item = item;
         this.startTime = startTime;
         this.endTime = endTime;
         this.duration = endTime - startTime;
+        java.util.Date startTimeDate = new java.util.Date((long)startTime*1000);
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(startTimeDate);
+        this.day = cal.get(Calendar.DAY_OF_MONTH);
+        this.month = cal.get(Calendar.MONTH);
+        this.year = cal.get(Calendar.YEAR);
+
     }
 
     public long getStartTime() {
@@ -39,4 +53,35 @@ public class PickUps {
         this.duration = duration;
     }
 
+    public int getDay() {
+        return day;
+    }
+
+    public void setDay(int day) {
+        this.day = day;
+    }
+
+    public int getMonth() {
+        return month;
+    }
+
+    public void setMonth(int month) {
+        this.month = month;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public Item getItem() {
+        return item;
+    }
+
+    public void setItem(Item item) {
+        this.item = item;
+    }
 }

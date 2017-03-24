@@ -95,7 +95,9 @@ public class Item {
             }else if(!inPlace){
                 if ((average + this.threshold) > dRssi && (average - this.threshold < dRssi)) {
                     inPlace = true;
-                    PickUps pu = new PickUps(this.lastSeen,data.getTime());
+                    PickUps pu = new PickUps(this.lastSeen,data.getTime(),this);
+                    FirebaseConnection fc = new FirebaseConnection();
+                    fc.pushPickUp(pu);
                     this.pickUps.add(pu);
                     this.data[this.dataC] = data;
                     this.dataC = (this.dataC + 1) %10;

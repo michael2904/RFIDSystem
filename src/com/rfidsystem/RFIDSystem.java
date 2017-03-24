@@ -34,6 +34,15 @@ public class RFIDSystem {
         return false;
     }
 
+    public Item getItem(String uid){
+        for (Item item: items) {
+            if(item.getUid().equals(uid)){
+                return item;
+            }
+        }
+        return null;
+    }
+
     public ArrayList<Item> getItems() {
         return items;
     }

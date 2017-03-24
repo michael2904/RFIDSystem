@@ -184,10 +184,14 @@ public class ReadAsync
         public void tagRead(Reader r, TagReadData tr){
             System.out.println("Time: "+tr.getTime() + " Frequency: " + tr.getFrequency() + " Antenna: " + tr.getAntenna() + " Tag ID: " + tr.getTag().epcString() + " Read Count: " + tr.getReadCount() + "  RSSI: " + tr.getRssi());
             RFIDSystem rf = RFIDSystem.getInstance();
+            Item item = null;
             if(!rf.checkItem(tr.getTag().epcString())){
-                Item item = new Item(tr.getTag().epcString());
+                item = new Item(tr.getTag().epcString());
                 rf.addItem(item);
+            }else{
+                item = rf.getItem(tr.getTag().epcString());
             }
+            item.addData(tr);
         }
 
     }
