@@ -95,34 +95,42 @@ public class FirebaseConnection {
 //    public static void main(String[] args){
 //        FirebaseConnection fc = new FirebaseConnection();
 //        LinkedHashMap<String, Object> dataMap;
-//        for(int i = 0;i<10;i++){
-//            dataMap = new LinkedHashMap<String, Object>();
-//            long startTime = System.currentTimeMillis();
-//            try {
-//                Thread.sleep(i*1000);
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
+//        Calendar start = Calendar.getInstance();
+//        Date startDate = new Date(1486998000000L);
+//        start.setTime(startDate);
+//        Calendar end = Calendar.getInstance();
+//        Date endDate = new Date(1487541600000L);
+//        end.setTime(endDate);
+//        Date date;
+//        for (date = start.getTime(); start.before(end); start.add(Calendar.DATE, 1), date = start.getTime()) {
+//            // Do your job here with `date`.
+//            System.out.println(date);
+//            for(int i = 0;i<10;i++){
+//                dataMap = new LinkedHashMap<String, Object>();
+//                long startTime = date.getTime();
+//                long endTime = date.getTime() + (i+1)*10000;
+//                dataMap.put("startTime", startTime);
+//                dataMap.put("endTime", endTime);
+//                dataMap.put("duration", endTime-startTime);
+//                dataMap.put("day", start.get(Calendar.DAY_OF_MONTH) );
+//                dataMap.put("month",start.get(Calendar.MONTH) + 1);
+//                dataMap.put("year",start.get(Calendar.YEAR));
+//                String path = "Pickups/890123456789012/pickup"+ UUID.randomUUID().toString();
+//                System.out.println(path);
+//                try {
+//                    response = fc.firebase.put(path, dataMap);
+//                } catch (JacksonUtilityException e) {
+//                    e.printStackTrace();
+//                } catch (FirebaseException e) {
+//                    e.printStackTrace();
+//                } catch (UnsupportedEncodingException e) {
+//                    e.printStackTrace();
+//                }
+//                System.out.println("\n\nResult of PUT (for the test-PUT):\n" + response);
+//                System.out.println("\n");
+//                start.add(Calendar.HOUR_OF_DAY,1);
+//                date = start.getTime();
 //            }
-//            long endTime = System.currentTimeMillis();
-//            dataMap.put("startTime", startTime);
-//            dataMap.put("endTime", endTime);
-//            dataMap.put("duration", endTime-startTime);
-//            dataMap.put("day", 24 );
-//            dataMap.put("month",3);
-//            dataMap.put("year",2017);
-//            String path = "Pickups/6543210987654321/pickup"+ UUID.randomUUID().toString();
-//            System.out.println(path);
-//            try {
-//                response = fc.firebase.put(path, dataMap);
-//            } catch (JacksonUtilityException e) {
-//                e.printStackTrace();
-//            } catch (FirebaseException e) {
-//                e.printStackTrace();
-//            } catch (UnsupportedEncodingException e) {
-//                e.printStackTrace();
-//            }
-//            System.out.println("\n\nResult of PUT (for the test-PUT):\n" + response);
-//            System.out.println("\n");
 //        }
 //    }
 

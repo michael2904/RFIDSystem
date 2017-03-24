@@ -18,8 +18,11 @@ public class Item {
     private String price;
     private ArrayList<PickUps> pickUps = new ArrayList<PickUps>();
     private TagReadData[] data = new TagReadData[10];
+    private TagReadData[] dataOut = new TagReadData[10];
     private int dataC = 0;
-    private int count;
+    private int dataO = 0;
+    private int count = 0;
+    private int countO = 0;
     private int threshold = 3;
     private Boolean inPlace = true;
     private long lastSeen;
@@ -87,12 +90,22 @@ public class Item {
     public void addData(TagReadData data){
         this.count++;
         if(count >= 10) {
-            int average = getAvData();
+            int average = getAvData(this.data);
             int dRssi = data.getRssi();
             if (((average + this.threshold) > dRssi && dRssi > (average - this.threshold)) && inPlace) {
                 this.data[this.dataC] = data;
                 this.dataC = (this.dataC + 1) %10;
             }else if(!inPlace){
+//                countO++;
+//                if(countO >=10){
+//
+//                }else{
+//                    this.dataOut[this.dataO] = data;
+//                    this.dataO = (this.dataO + 1) %10;
+//                }
+//                int averageOut = getAvData(this.dataOut);
+//                this.dataOut[this.dataO] = data;
+//                this.dataO = (this.dataO + 1) %10;
                 if ((average + this.threshold) > dRssi && (average - this.threshold < dRssi)) {
                     inPlace = true;
                     PickUps pu = new PickUps(this.lastSeen,data.getTime(),this);
@@ -106,15 +119,18 @@ public class Item {
                 inPlace = false;
                 this.lastSeen = data.getTime();
             }
+        }else{
+            this.data[this.dataC] = data;
+            this.dataC = (this.dataC + 1) %10;
         }
     }
 
-    public int getAvData(){
+    public int getAvData(TagReadData[] data){
         int average = 0;
-        for(int i = 0; i< this.data.length;i++){
-            average += this.data[i].getRssi();
+        for(int i = 0; i< data.length;i++){
+            average += data[i].getRssi();
         }
-        average /= this.data.length;
+        average /= data.length;
         return average;
     }
 }
