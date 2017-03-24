@@ -3,7 +3,6 @@ package com.rfidsystem;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
-import java.lang.reflect.Array;
 import java.util.*;
 
 import net.thegreshams.firebase4j.error.FirebaseException;
@@ -93,39 +92,39 @@ public class FirebaseConnection {
 //        System.out.println( "\n\nResult of GET (for the test-DELETE):\n" + response );
     }
 
-    public static void main(String[] args){
-        FirebaseConnection fc = new FirebaseConnection();
-        LinkedHashMap<String, Object> dataMap;
-        for(int i = 0;i<10;i++){
-            dataMap = new LinkedHashMap<String, Object>();
-            long startTime = System.currentTimeMillis();
-            try {
-                Thread.sleep(i*1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            long endTime = System.currentTimeMillis();
-            dataMap.put("startTime", startTime);
-            dataMap.put("endTime", endTime);
-            dataMap.put("duration", endTime-startTime);
-            dataMap.put("day", 24 );
-            dataMap.put("month",3);
-            dataMap.put("year",2017);
-            String path = "Pickups/6543210987654321/pickup"+ UUID.randomUUID().toString();
-            System.out.println(path);
-            try {
-                response = fc.firebase.put(path, dataMap);
-            } catch (JacksonUtilityException e) {
-                e.printStackTrace();
-            } catch (FirebaseException e) {
-                e.printStackTrace();
-            } catch (UnsupportedEncodingException e) {
-                e.printStackTrace();
-            }
-            System.out.println("\n\nResult of PUT (for the test-PUT):\n" + response);
-            System.out.println("\n");
-        }
-    }
+//    public static void main(String[] args){
+//        FirebaseConnection fc = new FirebaseConnection();
+//        LinkedHashMap<String, Object> dataMap;
+//        for(int i = 0;i<10;i++){
+//            dataMap = new LinkedHashMap<String, Object>();
+//            long startTime = System.currentTimeMillis();
+//            try {
+//                Thread.sleep(i*1000);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//            long endTime = System.currentTimeMillis();
+//            dataMap.put("startTime", startTime);
+//            dataMap.put("endTime", endTime);
+//            dataMap.put("duration", endTime-startTime);
+//            dataMap.put("day", 24 );
+//            dataMap.put("month",3);
+//            dataMap.put("year",2017);
+//            String path = "Pickups/6543210987654321/pickup"+ UUID.randomUUID().toString();
+//            System.out.println(path);
+//            try {
+//                response = fc.firebase.put(path, dataMap);
+//            } catch (JacksonUtilityException e) {
+//                e.printStackTrace();
+//            } catch (FirebaseException e) {
+//                e.printStackTrace();
+//            } catch (UnsupportedEncodingException e) {
+//                e.printStackTrace();
+//            }
+//            System.out.println("\n\nResult of PUT (for the test-PUT):\n" + response);
+//            System.out.println("\n");
+//        }
+//    }
 
     public void pushPickUps(ArrayList<PickUps> pickUps){
         LinkedHashMap dataMap;

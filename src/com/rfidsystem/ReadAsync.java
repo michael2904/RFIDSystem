@@ -160,8 +160,8 @@ public class ReadAsync
             // search for tags in the background
             r.startReading();
 
-            System.out.println("Reading for 10 seconds...");
-            Thread.sleep(20000);
+            System.out.println("Reading for 30 seconds...");
+            Thread.sleep(30000);
 
             r.stopReading();
 
