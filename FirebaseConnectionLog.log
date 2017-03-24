@@ -1486,3 +1486,51 @@ FirebaseResponse[ (Success:true) (Code:200) (Body:{name=-KdOtkBb8YCWw5ID1crM}) (
 [DEBUG : 22 Mar 2017 17:50:49,970] (org.apache.http.impl.conn.DefaultClientConnection) Connection org.apache.http.impl.conn.DefaultClientConnection@4575b933 shut down
 [DEBUG : 22 Mar 2017 17:50:49,971] (org.apache.http.impl.conn.BasicClientConnectionManager) Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@33d1e6e5
 [ERROR : 22 Mar 2017 17:50:49,972] (net.thegreshams.firebase4j.service.Firebase) unable to receive response from request(POST) @ https://rfidsystem-cc897.firebaseio.com//test-POST2.json?
+[INFO : 23 Mar 2017 21:17:15,669] (net.thegreshams.firebase4j.service.Firebase) intialized with base-url: https://rfidsystem-cc897.firebaseio.com/
+[INFO : 23 Mar 2017 21:17:15,672] (net.thegreshams.firebase4j.service.Firebase) built full url to 'https://rfidsystem-cc897.firebaseio.com//test-POST2.json?' using relative-path of '/test-POST2'
+[DEBUG : 23 Mar 2017 21:17:16,366] (org.apache.http.impl.conn.BasicClientConnectionManager) Get connection for route {s}->https://rfidsystem-cc897.firebaseio.com
+[DEBUG : 23 Mar 2017 21:17:16,649] (org.apache.http.impl.conn.DefaultClientConnectionOperator) Connecting to rfidsystem-cc897.firebaseio.com:443
+[DEBUG : 23 Mar 2017 21:17:17,167] (org.apache.http.client.protocol.RequestAddCookies) CookieSpec selected: best-match
+[DEBUG : 23 Mar 2017 21:17:17,178] (org.apache.http.client.protocol.RequestAuthCache) Auth cache not set in the context
+[DEBUG : 23 Mar 2017 21:17:17,178] (org.apache.http.client.protocol.RequestTargetAuthentication) Target auth state: UNCHALLENGED
+[DEBUG : 23 Mar 2017 21:17:17,178] (org.apache.http.client.protocol.RequestProxyAuthentication) Proxy auth state: UNCHALLENGED
+[DEBUG : 23 Mar 2017 21:17:17,178] (org.apache.http.impl.client.DefaultRequestDirector) Attempt 1 to execute request
+[DEBUG : 23 Mar 2017 21:17:17,179] (org.apache.http.impl.conn.DefaultClientConnection) Sending request: POST /test-POST2.json? HTTP/1.1
+[DEBUG : 23 Mar 2017 21:17:17,179] (org.apache.http.impl.conn.Wire)  >> "POST /test-POST2.json? HTTP/1.1[\r][\n]"
+[DEBUG : 23 Mar 2017 21:17:17,180] (org.apache.http.impl.conn.Wire)  >> "Content-Length: 113[\r][\n]"
+[DEBUG : 23 Mar 2017 21:17:17,180] (org.apache.http.impl.conn.Wire)  >> "Content-Type: text/plain; charset=ISO-8859-1[\r][\n]"
+[DEBUG : 23 Mar 2017 21:17:17,180] (org.apache.http.impl.conn.Wire)  >> "Host: rfidsystem-cc897.firebaseio.com[\r][\n]"
+[DEBUG : 23 Mar 2017 21:17:17,181] (org.apache.http.impl.conn.Wire)  >> "Connection: Keep-Alive[\r][\n]"
+[DEBUG : 23 Mar 2017 21:17:17,181] (org.apache.http.impl.conn.Wire)  >> "User-Agent: Apache-HttpClient/4.3.6 (java 1.5)[\r][\n]"
+[DEBUG : 23 Mar 2017 21:17:17,182] (org.apache.http.impl.conn.Wire)  >> "[\r][\n]"
+[DEBUG : 23 Mar 2017 21:17:17,182] (org.apache.http.impl.conn.DefaultClientConnection) >> POST /test-POST2.json? HTTP/1.1
+[DEBUG : 23 Mar 2017 21:17:17,182] (org.apache.http.impl.conn.DefaultClientConnection) >> Content-Length: 113
+[DEBUG : 23 Mar 2017 21:17:17,182] (org.apache.http.impl.conn.DefaultClientConnection) >> Content-Type: text/plain; charset=ISO-8859-1
+[DEBUG : 23 Mar 2017 21:17:17,182] (org.apache.http.impl.conn.DefaultClientConnection) >> Host: rfidsystem-cc897.firebaseio.com
+[DEBUG : 23 Mar 2017 21:17:17,182] (org.apache.http.impl.conn.DefaultClientConnection) >> Connection: Keep-Alive
+[DEBUG : 23 Mar 2017 21:17:17,182] (org.apache.http.impl.conn.DefaultClientConnection) >> User-Agent: Apache-HttpClient/4.3.6 (java 1.5)
+[DEBUG : 23 Mar 2017 21:17:17,183] (org.apache.http.impl.conn.Wire)  >> "{"Key_1":"This is the first value","Key_2":"This is value #2","Key_3":{"Sub-Key1":"This is the first sub-value"}}"
+[DEBUG : 23 Mar 2017 21:17:17,226] (org.apache.http.impl.conn.Wire)  << "HTTP/1.1 200 OK[\r][\n]"
+[DEBUG : 23 Mar 2017 21:17:17,229] (org.apache.http.impl.conn.Wire)  << "Server: nginx[\r][\n]"
+[DEBUG : 23 Mar 2017 21:17:17,229] (org.apache.http.impl.conn.Wire)  << "Date: Fri, 24 Mar 2017 01:17:17 GMT[\r][\n]"
+[DEBUG : 23 Mar 2017 21:17:17,230] (org.apache.http.impl.conn.Wire)  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+[DEBUG : 23 Mar 2017 21:17:17,230] (org.apache.http.impl.conn.Wire)  << "Content-Length: 31[\r][\n]"
+[DEBUG : 23 Mar 2017 21:17:17,230] (org.apache.http.impl.conn.Wire)  << "Connection: keep-alive[\r][\n]"
+[DEBUG : 23 Mar 2017 21:17:17,230] (org.apache.http.impl.conn.Wire)  << "Access-Control-Allow-Origin: *[\r][\n]"
+[DEBUG : 23 Mar 2017 21:17:17,230] (org.apache.http.impl.conn.Wire)  << "Cache-Control: no-cache[\r][\n]"
+[DEBUG : 23 Mar 2017 21:17:17,231] (org.apache.http.impl.conn.Wire)  << "Strict-Transport-Security: max-age=31556926; includeSubDomains; preload[\r][\n]"
+[DEBUG : 23 Mar 2017 21:17:17,231] (org.apache.http.impl.conn.Wire)  << "[\r][\n]"
+[DEBUG : 23 Mar 2017 21:17:17,232] (org.apache.http.impl.conn.DefaultClientConnection) Receiving response: HTTP/1.1 200 OK
+[DEBUG : 23 Mar 2017 21:17:17,232] (org.apache.http.impl.conn.DefaultClientConnection) << HTTP/1.1 200 OK
+[DEBUG : 23 Mar 2017 21:17:17,232] (org.apache.http.impl.conn.DefaultClientConnection) << Server: nginx
+[DEBUG : 23 Mar 2017 21:17:17,232] (org.apache.http.impl.conn.DefaultClientConnection) << Date: Fri, 24 Mar 2017 01:17:17 GMT
+[DEBUG : 23 Mar 2017 21:17:17,232] (org.apache.http.impl.conn.DefaultClientConnection) << Content-Type: application/json; charset=utf-8
+[DEBUG : 23 Mar 2017 21:17:17,233] (org.apache.http.impl.conn.DefaultClientConnection) << Content-Length: 31
+[DEBUG : 23 Mar 2017 21:17:17,233] (org.apache.http.impl.conn.DefaultClientConnection) << Connection: keep-alive
+[DEBUG : 23 Mar 2017 21:17:17,233] (org.apache.http.impl.conn.DefaultClientConnection) << Access-Control-Allow-Origin: *
+[DEBUG : 23 Mar 2017 21:17:17,233] (org.apache.http.impl.conn.DefaultClientConnection) << Cache-Control: no-cache
+[DEBUG : 23 Mar 2017 21:17:17,233] (org.apache.http.impl.conn.DefaultClientConnection) << Strict-Transport-Security: max-age=31556926; includeSubDomains; preload
+[DEBUG : 23 Mar 2017 21:17:17,238] (org.apache.http.impl.client.DefaultRequestDirector) Connection can be kept alive indefinitely
+[DEBUG : 23 Mar 2017 21:17:17,248] (org.apache.http.impl.conn.Wire)  << "{"name":"-KfxstsNUOLezvkXJeVO"}"
+[DEBUG : 23 Mar 2017 21:17:17,248] (org.apache.http.impl.conn.BasicClientConnectionManager) Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@b2d3e6d
+[DEBUG : 23 Mar 2017 21:17:17,248] (org.apache.http.impl.conn.BasicClientConnectionManager) Connection can be kept alive indefinitely

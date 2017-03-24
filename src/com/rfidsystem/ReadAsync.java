@@ -5,7 +5,6 @@ package com.rfidsystem;
  */
 
 // Import the API
-//package samples;
 import com.thingmagic.*;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -26,21 +25,18 @@ public class ReadAsync
 
     public static void setTrace(Reader r, String args[])
     {
-        if (args[0].toLowerCase().equals("on"))
-        {
+        if (args[0].toLowerCase().equals("on")){
             r.addTransportListener(Reader.simpleTransportListener);
             currentListener = Reader.simpleTransportListener;
         }
-        else if (currentListener != null)
-        {
+        else if (currentListener != null){
             r.removeTransportListener(Reader.simpleTransportListener);
         }
     }
 
     static class SerialPrinter implements TransportListener
     {
-        public void message(boolean tx, byte[] data, int timeout)
-        {
+        public void message(boolean tx, byte[] data, int timeout){
             System.out.print(tx ? "Sending: " : "Received:");
             for (int i = 0; i < data.length; i++)
             {
@@ -54,8 +50,7 @@ public class ReadAsync
 
     static class StringPrinter implements TransportListener
     {
-        public void message(boolean tx, byte[] data, int timeout)
-        {
+        public void message(boolean tx, byte[] data, int timeout){
             System.out.println((tx ? "Sending:\n" : "Receiving:\n") +
                     new String(data));
         }
@@ -72,15 +67,13 @@ public class ReadAsync
         if (argv.length < 1)
             usage();
 
-        if (argv[nextarg].equals("-v"))
-        {
+        if (argv[nextarg].equals("-v")){
             trace = true;
             nextarg++;
         }
 
         // Create Reader object, connecting to physical device
-        try
-        {
+        try{
             String readerURI = argv[nextarg];
             nextarg++;
 
@@ -178,21 +171,23 @@ public class ReadAsync
             // Shut down reader
             r.destroy();
         }
-        catch (ReaderException re)
-        {
+        catch (ReaderException re){
             System.out.println("ReaderException: " + re.getMessage());
         }
-        catch (Exception re)
-        {
+        catch (Exception re){
             System.out.println("Exception: " + re.getMessage());
         }
     }
 
     static class PrintListener implements ReadListener
     {
-        public void tagRead(Reader r, TagReadData tr)
-        {
+        public void tagRead(Reader r, TagReadData tr){
             System.out.println("Time: "+tr.getTime() + " Frequency: " + tr.getFrequency() + " Antenna: " + tr.getAntenna() + " Tag ID: " + tr.getTag().epcString() + " Read Count: " + tr.getReadCount() + "  RSSI: " + tr.getRssi());
+            RFIDSystem rf = RFIDSystem.getInstance();
+            if(!rf.checkItem(tr.getTag().epcString())){
+                Item item = new Item(tr.getTag().epcString());
+                rf.addItem(item);
+            }
         }
 
     }
@@ -201,8 +196,7 @@ public class ReadAsync
     {
         String strDateFormat = "M/d/yyyy h:m:s a";
         SimpleDateFormat sdf = new SimpleDateFormat(strDateFormat);
-        public void tagReadException(com.thingmagic.Reader r, ReaderException re)
-        {
+        public void tagReadException(com.thingmagic.Reader r, ReaderException re){
             String format = sdf.format(Calendar.getInstance().getTime());
             System.out.println("Reader Exception: " + re.getMessage() + " Occured on :" + format);
             if(re.getMessage().equals("Connection Lost"))
@@ -215,8 +209,7 @@ public class ReadAsync
     static  int[] parseAntennaList(String[] args,int argPosition)
     {
         int[] antennaList = null;
-        try
-        {
+        try{
             String argument = args[argPosition + 1];
             String[] antennas = argument.split(",");
             int i = 0;
@@ -227,13 +220,11 @@ public class ReadAsync
                 i++;
             }
         }
-        catch (IndexOutOfBoundsException ex)
-        {
+        catch (IndexOutOfBoundsException ex){
             System.out.println("Missing argument after " + args[argPosition]);
             usage();
         }
-        catch (Exception ex)
-        {
+        catch (Exception ex){
             System.out.println("Invalid argument at position " + (argPosition + 1) + ". " + ex.getMessage());
             usage();
         }
