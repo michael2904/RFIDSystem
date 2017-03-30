@@ -1,7 +1,7 @@
 <component name="libraryTable">
-  <library name="ltkjava-1.0.0.6">
+  <library name="firebase4j">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/libs/ltkjava-1.0.0.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/firebase4j.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
