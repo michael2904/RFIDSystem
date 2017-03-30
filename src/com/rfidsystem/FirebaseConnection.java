@@ -135,7 +135,7 @@ public class FirebaseConnection {
 //    }
 
     public void pushPickUps(ArrayList<PickUps> pickUps){
-        LinkedHashMap dataMap;
+        LinkedHashMap<String, Object> dataMap;
         for (PickUps pu: pickUps) {
             dataMap = new LinkedHashMap<String, Object>();
             dataMap.put("startTime", pu.getStartTime());
@@ -159,7 +159,7 @@ public class FirebaseConnection {
     }
 
     public void pushPickUp(PickUps pu){
-        LinkedHashMap dataMap;
+        LinkedHashMap<String, Object> dataMap;
         dataMap = new LinkedHashMap<String, Object>();
         dataMap.put("startTime", pu.getStartTime());
         dataMap.put("endTime", pu.getEndTime());

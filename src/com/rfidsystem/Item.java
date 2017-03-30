@@ -18,16 +18,16 @@ public class Item {
     private String price;
     private ArrayList<PickUps> pickUps = new ArrayList<PickUps>();
     private TagReadData[] data = new TagReadData[10];
-    private TagReadData[] dataOut = new TagReadData[10];
+    private int[] lastData = new int[5];
     private int dataC = 0;
-    private int dataO = 0;
+    private int lastDataC = 0;
     private int count = 0;
-    private int countO = 0;
-    private int threshold = 3;
+    private int threshold = 5;
     private Boolean inPlace = true;
     private long lastSeen;
 
     public Item(String uid){
+        System.out.println("New Item with uid: "+uid);
         this.uid = uid;
     }
 
@@ -88,25 +88,25 @@ public class Item {
     }
 
     public void addData(TagReadData data){
-        this.count++;
+        System.out.println("adding data count: "+count);
+        int dRssi = data.getRssi();
+        int avDRddi = dRssi;
+        if (count >= 5) {
+            this.lastData[this.lastDataC] = dRssi;
+            this.lastDataC = (this.lastDataC + 1) % 5;
+            avDRddi = getAvIntData(this.lastData);
+        }
         if(count >= 10) {
             int average = getAvData(this.data);
-            int dRssi = data.getRssi();
-            if (((average + this.threshold) > dRssi && dRssi > (average - this.threshold)) && inPlace) {
+            System.out.println("average: "+average+" and rssi: "+avDRddi);
+            if (((average + this.threshold) > avDRddi && avDRddi > (average - this.threshold)) && inPlace) {
+                System.out.println("in place: "+avDRddi);
                 this.data[this.dataC] = data;
                 this.dataC = (this.dataC + 1) %10;
             }else if(!inPlace){
-//                countO++;
-//                if(countO >=10){
-//
-//                }else{
-//                    this.dataOut[this.dataO] = data;
-//                    this.dataO = (this.dataO + 1) %10;
-//                }
-//                int averageOut = getAvData(this.dataOut);
-//                this.dataOut[this.dataO] = data;
-//                this.dataO = (this.dataO + 1) %10;
-                if ((average + this.threshold) > dRssi && (average - this.threshold < dRssi)) {
+                System.out.println("not in place: "+avDRddi);
+                if ((average + this.threshold) > avDRddi && avDRddi > (average - this.threshold)) {
+                    System.out.println("put back in place: "+avDRddi);
                     inPlace = true;
                     PickUps pu = new PickUps(this.lastSeen,data.getTime(),this);
                     FirebaseConnection fc = new FirebaseConnection();
@@ -116,21 +116,38 @@ public class Item {
                     this.dataC = (this.dataC + 1) %10;
                 }
             }else{
+                System.out.println("taken out of place: "+avDRddi);
                 inPlace = false;
                 this.lastSeen = data.getTime();
             }
         }else{
+            System.out.println("adding data else count: "+count);
             this.data[this.dataC] = data;
             this.dataC = (this.dataC + 1) %10;
         }
+        this.count++;
     }
 
     public int getAvData(TagReadData[] data){
+        System.out.println("getAvData adding data count: ");
         int average = 0;
         for(int i = 0; i< data.length;i++){
             average += data[i].getRssi();
         }
         average /= data.length;
+        System.out.println("average: "+average);
+        return average;
+    }
+
+    public int getAvIntData(int[] data){
+        System.out.println("getAvDataInt adding data count: ");
+        int average = 0;
+        for(int i = 0; i< data.length;i++){
+            average += data[i];
+            System.out.println("average: "+average);
+        }
+        average /= data.length;
+        System.out.println("average: "+average);
         return average;
     }
 }
