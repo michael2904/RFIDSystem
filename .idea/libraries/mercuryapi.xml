@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="mercuryapi">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/libs/mercuryapi.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
