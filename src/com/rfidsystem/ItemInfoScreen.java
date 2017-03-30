@@ -32,8 +32,8 @@ public class ItemInfoScreen {
 
     private JFrame frame;
     private Timer timer;
-    //2 minutes in ms
-    private int timerTime = 2 * 60 * 1000;
+    //1 minutes in ms
+    private int timerTime = 1 * 60 * 1000;
 
     public ItemInfoScreen(Item item) {
         //Hardcoded Values

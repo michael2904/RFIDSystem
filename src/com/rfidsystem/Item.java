@@ -112,6 +112,7 @@ public class Item {
                     FirebaseConnection fc = new FirebaseConnection();
                     fc.pushPickUp(pu);
                     this.pickUps.add(pu);
+                    new ItemInfoScreen(this);
                     this.data[this.dataC] = data;
                     this.dataC = (this.dataC + 1) %10;
                 }

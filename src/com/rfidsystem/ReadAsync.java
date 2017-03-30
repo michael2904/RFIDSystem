@@ -54,15 +54,7 @@ public class ReadAsync {
 
     public static void main(String argv[]) {
         new GeneralInfoScreen();
-        
-        /*
-        //Upon pickup use:
-        Item item = ...;
-        //Show info screen
-       ItemInfoScreen infoScreen = new ItemInfoScreen(item);
-        //Close info screen
-        infoScreen.closeWindow();
-         */
+
 
         System.out.println("HI");
         // Program setup
