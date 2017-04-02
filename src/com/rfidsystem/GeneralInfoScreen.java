@@ -7,14 +7,13 @@ import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.WindowEvent;
+import java.net.URL;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
-import java.util.Timer;
 
 public class GeneralInfoScreen extends JFrame {
 
@@ -29,12 +28,15 @@ public class GeneralInfoScreen extends JFrame {
 
         JPanel center = new JPanel(new GridLayout(0, 1));
         center.setBackground(Color.WHITE);
-
-        Icon myImgIcon = new ImageIcon(getClass().getResource("resources/icon3.gif"));
+        Class cla = getClass();
+        System.out.println(cla.getCanonicalName());
+        URL url = cla.getResource("resources/MPact.png");
+        System.out.println(url);
+        Icon myImgIcon = new ImageIcon(url);
         JLabel imageLabel = new JLabel(myImgIcon);
         imageLabel.setVerticalAlignment(SwingConstants.BOTTOM);
 
-        JLabel textLabel = new JLabel("Pick an item to view to view its information!");
+        JLabel textLabel = new JLabel("Pick an item to view its information!");
         textLabel.setFont(new Font("Serif", Font.PLAIN, 50));
         textLabel.setHorizontalAlignment(SwingConstants.CENTER);
         textLabel.setVerticalAlignment(SwingConstants.TOP);
@@ -47,7 +49,7 @@ public class GeneralInfoScreen extends JFrame {
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
-        AWTUtilities.setWindowOpacity(frame, 0f);
+//        AWTUtilities.setWindowOpacity(frame, 0f);
         fadeIn(); 
     }
 
@@ -63,7 +65,7 @@ public class GeneralInfoScreen extends JFrame {
                         newOpacity = 1f;
                         cancel = true;
                     }
-                    AWTUtilities.setWindowOpacity(frame, newOpacity);
+//                    AWTUtilities.setWindowOpacity(frame, newOpacity);
                     if (cancel) {
                         ((javax.swing.Timer) evt.getSource()).stop();
                     }

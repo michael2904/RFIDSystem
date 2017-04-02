@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="rfidsystem:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/rfidsystem_jar</output-path>
+    <root id="archive" name="rfidsystem.jar">
+      <element id="module-output" name="rfidsystem" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/log4j/log4j/1.2.16/log4j-1.2.16.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/mercuryapi.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/firebase4j.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/ltkjava-1.0.0.6.jar" path-in-jar="/" />
+      <element id="library" level="project" name="firebase4j" />
+      <element id="library" level="project" name="mercuryapi" />
+      <element id="library" level="project" name="Maven: log4j:log4j:1.2.16" />
+      <element id="library" level="project" name="ltkjava-1.0.0.6" />
+    </root>
+  </artifact>
+</component>

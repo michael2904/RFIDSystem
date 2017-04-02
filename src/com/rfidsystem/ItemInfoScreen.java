@@ -104,7 +104,7 @@ public class ItemInfoScreen {
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
-        AWTUtilities.setWindowOpacity(frame, 0f);
+//        AWTUtilities.setWindowOpacity(frame, 0f);
         fadeIn();
 
         setWindowCloseTimer(timerTime);
@@ -122,7 +122,7 @@ public class ItemInfoScreen {
                         newOpacity = 1f;
                         cancel = true;
                     }
-                    AWTUtilities.setWindowOpacity(frame, newOpacity);
+//                    AWTUtilities.setWindowOpacity(frame, newOpacity);
                     if (cancel) {
                         ((javax.swing.Timer) evt.getSource()).stop();
                     }
@@ -144,7 +144,7 @@ public class ItemInfoScreen {
                         newOpacity = 0;
                         cancel = true;
                     }
-                    AWTUtilities.setWindowOpacity(frame, newOpacity);
+//                    AWTUtilities.setWindowOpacity(frame, newOpacity);
                     if (cancel) {
                         ((javax.swing.Timer) evt.getSource()).stop();
                         frame.dispose();

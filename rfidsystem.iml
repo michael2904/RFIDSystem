@@ -7,10 +7,11 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
+    <orderEntry type="library" exported="" name="Maven: log4j:log4j:1.2.16" level="project" />
+    <orderEntry type="library" exported="" name="firebase4j" level="project" />
+    <orderEntry type="library" exported="" name="mercuryapi" level="project" />
+    <orderEntry type="library" exported="" name="ltkjava-1.0.0.6" level="project" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: log4j:log4j:1.2.16" level="project" />
-    <orderEntry type="library" name="mercuryapi" level="project" />
-    <orderEntry type="library" name="firebase4j" level="project" />
   </component>
 </module>
