@@ -87,7 +87,7 @@ public class Item {
         this.data = data;
     }
 
-    public void addData(TagReadData data){
+    public void addData(TagReadData data, SimpleSwingBrowser browser){
         System.out.println("adding data count: "+count);
         int dRssi = data.getRssi();
         int avDRddi = dRssi;
@@ -112,7 +112,7 @@ public class Item {
                     FirebaseConnection fc = new FirebaseConnection();
                     fc.pushPickUp(pu);
                     this.pickUps.add(pu);
-                    new ItemInfoScreen(this);
+                    browser.loadItemInfoScreen(this);
                     this.data[this.dataC] = data;
                     this.dataC = (this.dataC + 1) %10;
                 }

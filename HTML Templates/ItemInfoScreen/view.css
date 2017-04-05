@@ -1,0 +1,115 @@
+@font-face {
+    font-family: 'myFont';
+    src: url('myFont2.ttf');
+}
+
+@font-face {
+    font-family: 'myFontDescription';
+    src: url('myFont1.ttf');
+}
+
+body {
+    background: #000000;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin: 0;
+}
+
+.centerElement {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+#background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+}
+
+#titleDiv {
+    position:relative;
+    width:100%;
+    height: 20%;
+    opacity:0;
+}
+
+#imageDiv {
+    position:relative;
+    width:100%;
+    height: 40%;
+}
+
+#descriptionDiv {    
+    position:relative;
+    width:100%;
+    height: 25%;
+    opacity:0;
+}
+
+#priceDiv {    
+    position:relative;
+    width:100%;
+    height: 15%;
+    opacity:0;
+}
+
+#title {
+    display: block;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    color: #ffffff;
+    font-family: myFont;
+    font-size: 400%;
+}
+
+#image {
+    width: auto;
+    height: 80%;
+    background-color: threeddarkshadow;
+    box-shadow: 0px 0px 200px rgba(50, 120, 200, 1);
+    padding:5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+	opacity: 0;
+}
+
+#description {
+    display: block;
+    position: relative;
+    text-align: center;
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+    height: auto;
+    color: #ffffff;
+    font-size: 225%;
+    font-family: myFontDescription;
+}
+
+#price {
+    display: block;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    color: #ffffff;
+    font-size: 225%;
+    font-family: myFontDescription;
+}

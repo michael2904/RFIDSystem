@@ -13,6 +13,7 @@ public class ReadAsync {
     static SerialPrinter serialPrinter;
     static StringPrinter stringPrinter;
     static TransportListener currentListener;
+    static SimpleSwingBrowser browser;
 
     static void usage() {
         System.out.printf("Usage: Please provide valid arguments, such as:\n"
@@ -53,8 +54,7 @@ public class ReadAsync {
     }
 
     public static void main(String argv[]) {
-        new GeneralInfoScreen();
-
+        browser = new SimpleSwingBrowser();
 
         System.out.println("HI");
         // Program setup
@@ -177,7 +177,7 @@ public class ReadAsync {
             } else {
                 item = rf.getItem(tr.getTag().epcString());
             }
-            item.addData(tr);
+            item.addData(tr, browser);
         }
 
     }
