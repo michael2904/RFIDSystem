@@ -18,7 +18,7 @@ public class Item {
     private String price;
     private ArrayList<PickUps> pickUps = new ArrayList<PickUps>();
     private TagReadData[] data = new TagReadData[10];
-    private int[] lastData = new int[5];
+    private int[] lastData = new int[8];
     private int dataC = 0;
     private int lastDataC = 0;
     private int count = 0;
@@ -109,8 +109,8 @@ public class Item {
                     System.out.println("put back in place: "+avDRddi);
                     inPlace = true;
                     PickUps pu = new PickUps(this.lastSeen,data.getTime(),this);
-                    FirebaseConnection fc = new FirebaseConnection();
-                    fc.pushPickUp(pu);
+//                    FirebaseConnection fc = new FirebaseConnection();
+//                    fc.pushPickUp(pu);
                     this.pickUps.add(pu);
                     new ItemInfoScreen(this);
                     this.data[this.dataC] = data;
@@ -130,25 +130,22 @@ public class Item {
     }
 
     public int getAvData(TagReadData[] data){
-        System.out.println("getAvData adding data count: ");
         int average = 0;
         for(int i = 0; i< data.length;i++){
             average += data[i].getRssi();
         }
         average /= data.length;
-        System.out.println("average: "+average);
+        System.out.println("getAvData: "+average);
         return average;
     }
 
     public int getAvIntData(int[] data){
-        System.out.println("getAvDataInt adding data count: ");
         int average = 0;
         for(int i = 0; i< data.length;i++){
             average += data[i];
-            System.out.println("average: "+average);
         }
         average /= data.length;
-        System.out.println("average: "+average);
+        System.out.println("getAvIntData: "+average);
         return average;
     }
 }

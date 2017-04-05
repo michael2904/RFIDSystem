@@ -29,9 +29,7 @@ public class GeneralInfoScreen extends JFrame {
         JPanel center = new JPanel(new GridLayout(0, 1));
         center.setBackground(Color.WHITE);
         Class cla = getClass();
-        System.out.println(cla.getCanonicalName());
         URL url = cla.getResource("resources/MPact.png");
-        System.out.println(url);
         Icon myImgIcon = new ImageIcon(url);
         JLabel imageLabel = new JLabel(myImgIcon);
         imageLabel.setVerticalAlignment(SwingConstants.BOTTOM);

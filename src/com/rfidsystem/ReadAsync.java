@@ -10,7 +10,8 @@ import java.util.Calendar;
 
 public class ReadAsync {
 
-    static SerialPrinter serialPrinter;
+    static SerialPrinter serialPrinter
+            ;
     static StringPrinter stringPrinter;
     static TransportListener currentListener;
 
@@ -146,18 +147,19 @@ public class ReadAsync {
             ReadListener rl = new PrintListener();
             r.addReadListener(rl);
             // search for tags in the background
+            java.util.Date startTimeDate = new java.util.Date(System.currentTimeMillis());
+            System.out.println("Reading for 30 seconds... starting at "+startTimeDate.toString());
             r.startReading();
-
-            System.out.println("Reading for 90 seconds...");
-            Thread.sleep(90000);
-
+            Thread.sleep(30000);
             r.stopReading();
-
+            java.util.Date stopTimeDate = new java.util.Date(System.currentTimeMillis());
+            System.out.println("Read for 30 seconds... stopped at "+stopTimeDate.toString());
             r.removeReadListener(rl);
             r.removeReadExceptionListener(exceptionListener);
 
             // Shut down reader
             r.destroy();
+            System.exit(0);
         } catch (ReaderException re) {
             System.out.println("ReaderException: " + re.getMessage());
         } catch (Exception re) {
@@ -168,7 +170,7 @@ public class ReadAsync {
     static class PrintListener implements ReadListener {
 
         public void tagRead(Reader r, TagReadData tr) {
-            System.out.println("Time: " + tr.getTime() + " Frequency: " + tr.getFrequency() + " Antenna: " + tr.getAntenna() + " Tag ID: " + tr.getTag().epcString() + " Read Count: " + tr.getReadCount() + "  RSSI: " + tr.getRssi());
+            System.out.println("Tag ID: " + tr.getTag().epcString() +" Time: " + tr.getTime() + " Frequency: " + tr.getFrequency() + " Antenna: " + tr.getAntenna() + " Read Count: " + tr.getReadCount() + "  RSSI: " + tr.getRssi());
             RFIDSystem rf = RFIDSystem.getInstance();
             Item item = null;
             if (!rf.checkItem(tr.getTag().epcString())) {
@@ -191,7 +193,7 @@ public class ReadAsync {
             String format = sdf.format(Calendar.getInstance().getTime());
             System.out.println("Reader Exception: " + re.getMessage() + " Occured on :" + format);
             if (re.getMessage().equals("Connection Lost")) {
-                System.exit(1);
+//                System.exit(1);
             }
         }
     }
