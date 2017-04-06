@@ -30,6 +30,7 @@ public class Item {
 
     public Item(String uid){
         this.uid = uid;
+        info = new ItemInfoScreen(this);
     }
 
     public String getUid() {
@@ -115,8 +116,8 @@ public class Item {
                     if(data.getTime()-this.lastSeen >= 1000) {
                         System.out.println("%%%%%%%%%%%%% put back in place: "+filtRSSI);
                         PickUps pu = new PickUps(this.lastSeen,data.getTime(),this);
-//                      FirebaseConnection fc = new FirebaseConnection();
-//                      fc.pushPickUp(pu);
+                        FirebaseConnection fc = new FirebaseConnection();
+                        fc.pushPickUp(pu);
                         this.pickUps.add(pu);
                         if(infoLaunched) {
                             System.out.println("%%%%%%%%%%%%% window closed: "+filtRSSI);
@@ -129,7 +130,7 @@ public class Item {
                 }else{
                     System.out.println("************ not in place: "+filtRSSI);
                     if(data.getTime()-this.lastSeen >= 0 && !infoLaunched) {
-                        info = new ItemInfoScreen(this);
+                        info.showWindow();
                         infoLaunched = true;
                     }
                 }

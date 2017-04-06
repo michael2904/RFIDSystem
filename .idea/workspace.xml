@@ -9,7 +9,6 @@
     <list default="true" id="1dc9af8c-29e9-4171-b970-e45626715aa8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/RFIDSystem_jar/RFIDSystem.jar" afterPath="$PROJECT_DIR$/out/artifacts/RFIDSystem_jar/RFIDSystem.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rfidsystem/GeneralInfoScreen.java" afterPath="$PROJECT_DIR$/src/com/rfidsystem/GeneralInfoScreen.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rfidsystem/Item.java" afterPath="$PROJECT_DIR$/src/com/rfidsystem/Item.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rfidsystem/ItemInfoScreen.java" afterPath="$PROJECT_DIR$/src/com/rfidsystem/ItemInfoScreen.java" />
     </list>
@@ -31,13 +30,11 @@
       <file leaf-file-name="Item.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/rfidsystem/Item.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="24" column="29" lean-forward="false" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+            <state relative-caret-position="294">
+              <caret line="119" column="24" lean-forward="false" selection-start-line="119" selection-start-column="24" selection-end-line="119" selection-end-column="24" />
               <folding>
-                <element signature="e#800#801#0" expanded="true" />
-                <element signature="e#830#831#0" expanded="true" />
-                <element signature="e#1739#1740#0" expanded="true" />
-                <element signature="e#1778#1779#0" expanded="true" />
+                <element signature="e#1780#1781#0" expanded="true" />
+                <element signature="e#1819#1820#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -46,11 +43,11 @@
       <file leaf-file-name="ItemInfoScreen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/rfidsystem/ItemInfoScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="82" column="0" lean-forward="true" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+            <state relative-caret-position="339">
+              <caret line="169" column="34" lean-forward="true" selection-start-line="169" selection-start-column="34" selection-end-line="169" selection-end-column="34" />
               <folding>
-                <element signature="e#6369#6558#0" expanded="true" />
-                <element signature="e#6557#6558#0" expanded="true" />
+                <element signature="e#6370#6559#0" expanded="true" />
+                <element signature="e#6558#6559#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -60,7 +57,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/rfidsystem/GeneralInfoScreen.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="33" column="50" lean-forward="true" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+              <caret line="33" column="50" lean-forward="false" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -80,7 +77,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/rfidsystem/ReadAsync.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="564">
-              <caret line="183" column="119" lean-forward="true" selection-start-line="183" selection-start-column="119" selection-end-line="183" selection-end-column="119" />
+              <caret line="183" column="119" lean-forward="false" selection-start-line="183" selection-start-column="119" selection-end-line="183" selection-end-column="119" />
               <folding />
             </state>
           </provider>
@@ -138,6 +135,7 @@
       <find>checkItem</find>
       <find>not in place</find>
       <find>inPlaceData</find>
+      <find>setVisi</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/libs/mercuryapi.jar!/com/thingmagic</dir>
@@ -167,8 +165,8 @@
         <option value="$PROJECT_DIR$/src/com/rfidsystem/RFIDSystem.java" />
         <option value="$PROJECT_DIR$/src/com/rfidsystem/PickUps.java" />
         <option value="$PROJECT_DIR$/src/com/rfidsystem/ReadAsync.java" />
-        <option value="$PROJECT_DIR$/src/com/rfidsystem/ItemInfoScreen.java" />
         <option value="$PROJECT_DIR$/src/com/rfidsystem/GeneralInfoScreen.java" />
+        <option value="$PROJECT_DIR$/src/com/rfidsystem/ItemInfoScreen.java" />
         <option value="$PROJECT_DIR$/src/com/rfidsystem/Item.java" />
       </list>
     </option>
@@ -869,7 +867,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1035">
           <caret line="110" column="183" lean-forward="false" selection-start-line="110" selection-start-column="174" selection-end-line="110" selection-end-column="183" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -903,7 +900,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/rfidsystem/ReadAsync.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="564">
-          <caret line="183" column="119" lean-forward="true" selection-start-line="183" selection-start-column="119" selection-end-line="183" selection-end-column="119" />
+          <caret line="183" column="119" lean-forward="false" selection-start-line="183" selection-start-column="119" selection-end-line="183" selection-end-column="119" />
           <folding />
         </state>
       </provider>
@@ -911,31 +908,29 @@
     <entry file="file://$PROJECT_DIR$/src/com/rfidsystem/GeneralInfoScreen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="33" column="50" lean-forward="true" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+          <caret line="33" column="50" lean-forward="false" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/rfidsystem/ItemInfoScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="82" column="0" lean-forward="true" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+        <state relative-caret-position="339">
+          <caret line="169" column="34" lean-forward="true" selection-start-line="169" selection-start-column="34" selection-end-line="169" selection-end-column="34" />
           <folding>
-            <element signature="e#6369#6558#0" expanded="true" />
-            <element signature="e#6557#6558#0" expanded="true" />
+            <element signature="e#6370#6559#0" expanded="true" />
+            <element signature="e#6558#6559#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/rfidsystem/Item.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="24" column="29" lean-forward="false" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+        <state relative-caret-position="294">
+          <caret line="119" column="24" lean-forward="false" selection-start-line="119" selection-start-column="24" selection-end-line="119" selection-end-column="24" />
           <folding>
-            <element signature="e#800#801#0" expanded="true" />
-            <element signature="e#830#831#0" expanded="true" />
-            <element signature="e#1739#1740#0" expanded="true" />
-            <element signature="e#1778#1779#0" expanded="true" />
+            <element signature="e#1780#1781#0" expanded="true" />
+            <element signature="e#1819#1820#0" expanded="true" />
           </folding>
         </state>
       </provider>

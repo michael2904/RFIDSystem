@@ -103,7 +103,7 @@ public class ItemInfoScreen {
 
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setVisible(true);
+        frame.setVisible(false);
 //        AWTUtilities.setWindowOpacity(frame, 0f);
         //fadeIn();
 
@@ -183,8 +183,19 @@ public class ItemInfoScreen {
         try {
             System.out.println("Closing Item Info Screen!");
             timer.cancel();
-            frame.dispose();
-            //fadeOut();
+            frame.setVisible(false);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Immediately close window
+     */
+    public void showWindow() {
+        try {
+            System.out.println("Showing Item Info Screen!");
+            frame.setVisible(true);
         } catch (Exception e) {
             e.printStackTrace();
         }
