@@ -22,7 +22,7 @@ public class Item {
     private int inPlaceC = 0;
     private int filteredC = 0;
     private int count = 0;
-    private int threshold = 4;
+    private int threshold = 5;
     private Boolean inPlace = true;
     private long lastSeen;
     private ItemInfoScreen info;

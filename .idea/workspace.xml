@@ -7,10 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1dc9af8c-29e9-4171-b970-e45626715aa8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/RFIDSystem_jar/RFIDSystem.jar" afterPath="$PROJECT_DIR$/out/artifacts/RFIDSystem_jar/RFIDSystem.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rfidsystem/FirebaseConnection.java" afterPath="$PROJECT_DIR$/src/com/rfidsystem/FirebaseConnection.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rfidsystem/Item.java" afterPath="$PROJECT_DIR$/src/com/rfidsystem/Item.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rfidsystem/ItemInfoScreen.java" afterPath="$PROJECT_DIR$/src/com/rfidsystem/ItemInfoScreen.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -30,8 +28,8 @@
       <file leaf-file-name="Item.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/rfidsystem/Item.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="119" column="24" lean-forward="false" selection-start-line="119" selection-start-column="24" selection-end-line="119" selection-end-column="24" />
+            <state relative-caret-position="315">
+              <caret line="24" column="29" lean-forward="false" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
               <folding>
                 <element signature="e#1780#1781#0" expanded="true" />
                 <element signature="e#1819#1820#0" expanded="true" />
@@ -66,8 +64,8 @@
       <file leaf-file-name="FirebaseConnection.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/rfidsystem/FirebaseConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="33" column="30" lean-forward="false" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
+            <state relative-caret-position="525">
+              <caret line="47" column="62" lean-forward="true" selection-start-line="47" selection-start-column="62" selection-end-line="47" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -134,8 +132,8 @@
       <find>readCount</find>
       <find>checkItem</find>
       <find>not in place</find>
-      <find>inPlaceData</find>
       <find>setVisi</find>
+      <find>inPlaceData</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/libs/mercuryapi.jar!/com/thingmagic</dir>
@@ -161,12 +159,12 @@
         <option value="$PROJECT_DIR$/rfidsystem.iml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/com/rfidsystem/FirebaseConnection.java" />
         <option value="$PROJECT_DIR$/src/com/rfidsystem/RFIDSystem.java" />
         <option value="$PROJECT_DIR$/src/com/rfidsystem/PickUps.java" />
         <option value="$PROJECT_DIR$/src/com/rfidsystem/ReadAsync.java" />
         <option value="$PROJECT_DIR$/src/com/rfidsystem/GeneralInfoScreen.java" />
         <option value="$PROJECT_DIR$/src/com/rfidsystem/ItemInfoScreen.java" />
+        <option value="$PROJECT_DIR$/src/com/rfidsystem/FirebaseConnection.java" />
         <option value="$PROJECT_DIR$/src/com/rfidsystem/Item.java" />
       </list>
     </option>
@@ -870,14 +868,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/rfidsystem/FirebaseConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="33" column="30" lean-forward="false" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/rfidsystem/PickUps.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
@@ -924,10 +914,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rfidsystem/FirebaseConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="47" column="62" lean-forward="true" selection-start-line="47" selection-start-column="62" selection-end-line="47" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/rfidsystem/Item.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="119" column="24" lean-forward="false" selection-start-line="119" selection-start-column="24" selection-end-line="119" selection-end-column="24" />
+        <state relative-caret-position="315">
+          <caret line="24" column="29" lean-forward="false" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
           <folding>
             <element signature="e#1780#1781#0" expanded="true" />
             <element signature="e#1819#1820#0" expanded="true" />
