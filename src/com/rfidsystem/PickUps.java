@@ -16,17 +16,18 @@ public class PickUps {
     private int year;
 
     public PickUps(long startTime, long endTime,Item item){
-        System.out.println("New PickUp from: "+startTime+" to: "+endTime);
         this.item = item;
         this.startTime = startTime;
         this.endTime = endTime;
         this.duration = endTime - startTime;
         java.util.Date startTimeDate = new java.util.Date(startTime);
+        java.util.Date endTimeDate = new java.util.Date(endTime);
         Calendar cal = Calendar.getInstance();
         cal.setTime(startTimeDate);
         this.day = cal.get(Calendar.DAY_OF_MONTH);
         this.month = cal.get(Calendar.MONTH) + 1;
         this.year = cal.get(Calendar.YEAR);
+        System.out.println("New PickUp from: "+startTimeDate+" to: "+endTimeDate);
 
     }
 

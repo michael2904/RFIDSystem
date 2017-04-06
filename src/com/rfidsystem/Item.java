@@ -17,17 +17,18 @@ public class Item {
     private String type;
     private String price;
     private ArrayList<PickUps> pickUps = new ArrayList<PickUps>();
-    private TagReadData[] data = new TagReadData[10];
-    private int[] lastData = new int[8];
-    private int dataC = 0;
-    private int lastDataC = 0;
+    private TagReadData[] inPlaceData = new TagReadData[10];
+    private int[] filtered = new int[4];
+    private int inPlaceC = 0;
+    private int filteredC = 0;
     private int count = 0;
-    private int threshold = 5;
+    private int threshold = 3;
     private Boolean inPlace = true;
     private long lastSeen;
+    private ItemInfoScreen info;
+    private Boolean infoLaunched = false;
 
     public Item(String uid){
-        System.out.println("New Item with uid: "+uid);
         this.uid = uid;
     }
 
@@ -79,52 +80,67 @@ public class Item {
         this.pickUps = pickUps;
     }
 
-    public TagReadData[] getData() {
-        return data;
+    public TagReadData[] getInPlaceData() {
+        return this.inPlaceData;
     }
 
-    public void setData(TagReadData[] data) {
-        this.data = data;
+    public void setInPlaceData(TagReadData[] data) {
+        this.inPlaceData = data;
     }
 
     public void addData(TagReadData data){
-        System.out.println("adding data count: "+count);
+        java.util.Date startTimeDate = new java.util.Date(data.getTime());
         int dRssi = data.getRssi();
-        int avDRddi = dRssi;
-        if (count >= 5) {
-            this.lastData[this.lastDataC] = dRssi;
-            this.lastDataC = (this.lastDataC + 1) % 5;
-            avDRddi = getAvIntData(this.lastData);
+        int filtRSSI = dRssi;
+        this.filtered[this.filteredC] = dRssi;
+        this.filteredC = (this.filteredC + 1) % 4;
+        if (count >= 4) {
+            filtRSSI = getAvIntData(this.filtered);
+//            System.out.println(data.getTag().epcString() +"," + data.getTime() + ","+startTimeDate+"," + data.getReadCount() + "," + filtRSSI+","+dRssi);
+        }else{
+//            System.out.println(data.getTag().epcString() +"," + data.getTime() + ","+startTimeDate+"," + data.getReadCount() + ",None,"+dRssi);
         }
         if(count >= 10) {
-            int average = getAvData(this.data);
-            System.out.println("average: "+average+" and rssi: "+avDRddi);
-            if (((average + this.threshold) > avDRddi && avDRddi > (average - this.threshold)) && inPlace) {
-                System.out.println("in place: "+avDRddi);
-                this.data[this.dataC] = data;
-                this.dataC = (this.dataC + 1) %10;
+            int average = getAvData(this.inPlaceData);
+//            System.out.println("is in Place if: "+(average+ this.threshold)+">"+filtRSSI+">"+(average - this.threshold));
+            if (((average + this.threshold) >= filtRSSI && filtRSSI >= (average - this.threshold)) && inPlace) {
+//                System.out.println("in place: "+filtRSSI);
+                this.inPlaceData[this.inPlaceC] = data;
+                this.inPlaceC = (this.inPlaceC + 1) %10;
             }else if(!inPlace){
-                System.out.println("not in place: "+avDRddi);
-                if ((average + this.threshold) > avDRddi && avDRddi > (average - this.threshold)) {
-                    System.out.println("put back in place: "+avDRddi);
+                if ((average + this.threshold) >= filtRSSI && filtRSSI >= (average - this.threshold)) {
+//                    System.out.println("%%%%%%%%%%%%% put back in place: "+filtRSSI);
                     inPlace = true;
-                    PickUps pu = new PickUps(this.lastSeen,data.getTime(),this);
-//                    FirebaseConnection fc = new FirebaseConnection();
-//                    fc.pushPickUp(pu);
-                    this.pickUps.add(pu);
-                    new ItemInfoScreen(this);
-                    this.data[this.dataC] = data;
-                    this.dataC = (this.dataC + 1) %10;
+                    if(data.getTime()-this.lastSeen >= 1000) {
+                        System.out.println("%%%%%%%%%%%%% put back in place: "+filtRSSI);
+                        PickUps pu = new PickUps(this.lastSeen,data.getTime(),this);
+//                      FirebaseConnection fc = new FirebaseConnection();
+//                      fc.pushPickUp(pu);
+                        this.pickUps.add(pu);
+                        if(infoLaunched) {
+                            System.out.println("%%%%%%%%%%%%% window closed: "+filtRSSI);
+                            info.closeWindow();
+                            infoLaunched = false;
+                        }
+                    }
+                    this.inPlaceData[this.inPlaceC] = data;
+                    this.inPlaceC = (this.inPlaceC + 1) %10;
+                }else{
+                    System.out.println("************ not in place: "+filtRSSI);
+                    if(data.getTime()-this.lastSeen >= 500 && !infoLaunched) {
+                        info = new ItemInfoScreen(this);
+                        infoLaunched = true;
+                    }
                 }
             }else{
-                System.out.println("taken out of place: "+avDRddi);
+                System.out.println("------------- taken out of place: "+filtRSSI+" Tag ID: " + data.epcString());
                 inPlace = false;
                 this.lastSeen = data.getTime();
             }
         }else{
-            System.out.println("adding data else count: "+count);
-            this.data[this.dataC] = data;
-            this.dataC = (this.dataC + 1) %10;
+//            System.out.println("adding data else count: "+count);
+            this.inPlaceData[this.inPlaceC] = data;
+            this.inPlaceC = (this.inPlaceC + 1) %10;
         }
         this.count++;
     }
@@ -135,7 +151,6 @@ public class Item {
             average += data[i].getRssi();
         }
         average /= data.length;
-        System.out.println("getAvData: "+average);
         return average;
     }
 
@@ -145,7 +160,6 @@ public class Item {
             average += data[i];
         }
         average /= data.length;
-        System.out.println("getAvIntData: "+average);
         return average;
     }
 }

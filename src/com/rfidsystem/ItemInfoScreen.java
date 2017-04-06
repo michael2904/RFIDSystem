@@ -105,7 +105,7 @@ public class ItemInfoScreen {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
 //        AWTUtilities.setWindowOpacity(frame, 0f);
-        fadeIn();
+        //fadeIn();
 
         setWindowCloseTimer(timerTime);
     }
@@ -167,7 +167,8 @@ public class ItemInfoScreen {
                     new java.util.TimerTask() {
                 @Override
                 public void run() {
-                    fadeOut();
+                    closeWindow();
+                    //fadeOut();
                 }
             }, timeMs);
         } catch (Exception e) {
@@ -180,8 +181,10 @@ public class ItemInfoScreen {
      */
     public void closeWindow() {
         try {
+            System.out.println("Closing Item Info Screen!");
             timer.cancel();
-            fadeOut();
+            frame.dispose();
+            //fadeOut();
         } catch (Exception e) {
             e.printStackTrace();
         }

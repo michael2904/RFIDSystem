@@ -15,7 +15,6 @@ public class RFIDSystem {
     }
 
     public static RFIDSystem getInstance() {
-        System.out.println("getInstance");
         if(instance == null) {
             instance = new RFIDSystem();
         }
@@ -23,12 +22,10 @@ public class RFIDSystem {
     }
 
     public void addItem(Item item){
-        System.out.println("addItem");
         items.add(item);
     }
 
     public boolean checkItem(String uid){
-        System.out.println("checkItem");
         for (Item item: items) {
             if(item.getUid().equals(uid)){
                 return true;
@@ -38,7 +35,6 @@ public class RFIDSystem {
     }
 
     public Item getItem(String uid){
-        System.out.println("getItem");
         for (Item item: items) {
             if(item.getUid().equals(uid)){
                 return item;

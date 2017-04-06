@@ -120,24 +120,24 @@ public class ReadAsync {
                     Gen2.LinkFrequency.LINK250KHZ);
             r.paramSet(TMConstants.TMR_PARAM_GEN2_TAGENCODING,
                     Gen2.TagEncoding.M2);
-            r.paramSet(TMConstants.TMR_PARAM_GEN2_Q, new Gen2.StaticQ(2));
-            r.paramSet(TMConstants.TMR_PARAM_GEN2_SESSION, Gen2.Session.S0);
+            r.paramSet(TMConstants.TMR_PARAM_GEN2_Q, new Gen2.StaticQ(3));
+            r.paramSet(TMConstants.TMR_PARAM_GEN2_SESSION, Gen2.Session.S1);
             r.paramSet(TMConstants.TMR_PARAM_GEN2_TARGET, Gen2.Target.A);
 
-            System.out.println("Tari: "
-                    + r.paramGet(TMConstants.TMR_PARAM_GEN2_TARI));
-            System.out.println("BLF: "
-                    + r.paramGet(TMConstants.TMR_PARAM_GEN2_BLF));
-            System.out.println("Tag Encoding: "
-                    + r.paramGet(TMConstants.TMR_PARAM_GEN2_TAGENCODING));
-            System.out.println("Q: "
-                    + r.paramGet(TMConstants.TMR_PARAM_GEN2_Q));
-            System.out.println("Session: "
-                    + r.paramGet(TMConstants.TMR_PARAM_GEN2_SESSION));
-            System.out.println("Target: "
-                    + r.paramGet(TMConstants.TMR_PARAM_GEN2_TARGET));
-            System.out.println("Tag Encoding: "
-                    + r.paramGet(TMConstants.TMR_PARAM_GEN2_TAGENCODING));
+//            System.out.println("Tari: "
+//                    + r.paramGet(TMConstants.TMR_PARAM_GEN2_TARI));
+//            System.out.println("BLF: "
+//                    + r.paramGet(TMConstants.TMR_PARAM_GEN2_BLF));
+//            System.out.println("Tag Encoding: "
+//                    + r.paramGet(TMConstants.TMR_PARAM_GEN2_TAGENCODING));
+//            System.out.println("Q: "
+//                    + r.paramGet(TMConstants.TMR_PARAM_GEN2_Q));
+//            System.out.println("Session: "
+//                    + r.paramGet(TMConstants.TMR_PARAM_GEN2_SESSION));
+//            System.out.println("Target: "
+//                    + r.paramGet(TMConstants.TMR_PARAM_GEN2_TARGET));
+//            System.out.println("Tag Encoding: "
+//                    + r.paramGet(TMConstants.TMR_PARAM_GEN2_TAGENCODING));
 
             SimpleReadPlan plan = new SimpleReadPlan(antennaList, TagProtocol.GEN2, true);
             r.paramSet(TMConstants.TMR_PARAM_READ_PLAN, plan);
@@ -148,12 +148,16 @@ public class ReadAsync {
             r.addReadListener(rl);
             // search for tags in the background
             java.util.Date startTimeDate = new java.util.Date(System.currentTimeMillis());
-            System.out.println("Reading for 30 seconds... starting at "+startTimeDate.toString());
+            System.out.println("Reading for 90 seconds... starting at "+startTimeDate.toString());
+            System.out.println("TagId,Time,ReadCount,Averaged RSSI");
             r.startReading();
-            Thread.sleep(30000);
+            Boolean trueBool = true;
+            while(trueBool){
+
+            }
             r.stopReading();
             java.util.Date stopTimeDate = new java.util.Date(System.currentTimeMillis());
-            System.out.println("Read for 30 seconds... stopped at "+stopTimeDate.toString());
+            System.out.println("Read for 90 seconds... stopped at "+stopTimeDate.toString());
             r.removeReadListener(rl);
             r.removeReadExceptionListener(exceptionListener);
 
@@ -170,16 +174,23 @@ public class ReadAsync {
     static class PrintListener implements ReadListener {
 
         public void tagRead(Reader r, TagReadData tr) {
-            System.out.println("Tag ID: " + tr.getTag().epcString() +" Time: " + tr.getTime() + " Frequency: " + tr.getFrequency() + " Antenna: " + tr.getAntenna() + " Read Count: " + tr.getReadCount() + "  RSSI: " + tr.getRssi());
+//            java.util.Date startTimeDate = new java.util.Date(tr.getTime());
+//            System.out.println("Tag ID: " + tr.getTag().epcString() +" Time: " + tr.getTime() + ", "+startTimeDate+" Frequency: " + tr.getFrequency() + " Antenna: " + tr.getAntenna() + " Read Count: " + tr.getReadCount() + "  RSSI: " + tr.getRssi());
+//            if(tr.getTag().epcString().equals("300833B2DDD9014000000000")){
+//                System.out.println("Tag ID: " + tr.getTag().epcString() +" Time: " + tr.getTime() + ", "+startTimeDate+" Frequency: " + tr.getFrequency() + " Antenna: " + tr.getAntenna() + " Read Count: " + tr.getReadCount() + "  RSSI: " + tr.getRssi());
+//            }
             RFIDSystem rf = RFIDSystem.getInstance();
             Item item = null;
-            if (!rf.checkItem(tr.getTag().epcString())) {
+            if (!rf.checkItem(tr.getTag().epcString()) && tr.getTag().epcString().equals("300833B2DDD9014000000000")) {
                 item = new Item(tr.getTag().epcString());
                 rf.addItem(item);
-            } else {
+                item.addData(tr);
+//                System.out.println("Tag ID: " + tr.getTag().epcString() +" Time: " + tr.getTime() + " Frequency: " + tr.getFrequency() + " Antenna: " + tr.getAntenna() + " Read Count: " + tr.getReadCount() + "  RSSI: " + tr.getRssi());
+            } else if(tr.getTag().epcString().equals("300833B2DDD9014000000000")){
                 item = rf.getItem(tr.getTag().epcString());
+                item.addData(tr);
+//                System.out.println("Tag ID: " + tr.getTag().epcString() +" Time: " + tr.getTime() + " Frequency: " + tr.getFrequency() + " Antenna: " + tr.getAntenna() + " Read Count: " + tr.getReadCount() + "  RSSI: " + tr.getRssi());
             }
-            item.addData(tr);
         }
 
     }
