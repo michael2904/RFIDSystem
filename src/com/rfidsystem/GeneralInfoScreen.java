@@ -37,7 +37,7 @@ public class GeneralInfoScreen extends JFrame {
         JLabel textLabel = new JLabel("Pick an item to view its information!");
         textLabel.setFont(new Font("Serif", Font.PLAIN, 50));
         textLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        textLabel.setVerticalAlignment(SwingConstants.TOP);
+        textLabel.setVerticalAlignment(SwingConstants.CENTER);
 
         center.add(imageLabel);
         center.add(textLabel);

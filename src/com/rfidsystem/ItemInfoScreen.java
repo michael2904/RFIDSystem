@@ -83,7 +83,7 @@ public class ItemInfoScreen {
 
         //Load Description
         JLabel descriptionLabel = new JLabel("<html><div style='text-align: center;'>" + itemDescription + "</div></html>");
-        descriptionLabel.setFont(new Font("Serif", Font.PLAIN, 50));
+        descriptionLabel.setFont(new Font("Serif", Font.PLAIN, 30));
         int descriptionHeight = (int) (0.2 * ScreenHeight);
         descriptionLabel.setPreferredSize(new Dimension(ScreenWidth, descriptionHeight));
         panel.add(descriptionLabel);

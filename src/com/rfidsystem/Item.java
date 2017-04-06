@@ -17,12 +17,12 @@ public class Item {
     private String type;
     private String price;
     private ArrayList<PickUps> pickUps = new ArrayList<PickUps>();
-    private TagReadData[] inPlaceData = new TagReadData[10];
-    private int[] filtered = new int[4];
+    private TagReadData[] inPlaceData = new TagReadData[20];
+    private int[] filtered = new int[5];
     private int inPlaceC = 0;
     private int filteredC = 0;
     private int count = 0;
-    private int threshold = 3;
+    private int threshold = 4;
     private Boolean inPlace = true;
     private long lastSeen;
     private ItemInfoScreen info;
@@ -93,20 +93,21 @@ public class Item {
         int dRssi = data.getRssi();
         int filtRSSI = dRssi;
         this.filtered[this.filteredC] = dRssi;
-        this.filteredC = (this.filteredC + 1) % 4;
-        if (count >= 4) {
+        this.filteredC = (this.filteredC + 1) % 5;
+        if (count >= 5) {
             filtRSSI = getAvIntData(this.filtered);
 //            System.out.println(data.getTag().epcString() +"," + data.getTime() + ","+startTimeDate+"," + data.getReadCount() + "," + filtRSSI+","+dRssi);
         }else{
 //            System.out.println(data.getTag().epcString() +"," + data.getTime() + ","+startTimeDate+"," + data.getReadCount() + ",None,"+dRssi);
         }
-        if(count >= 10) {
+        if(count >= 20) {
             int average = getAvData(this.inPlaceData);
+            if(count == 20)System.out.println("Position saved: with value"+average);
 //            System.out.println("is in Place if: "+(average+ this.threshold)+">"+filtRSSI+">"+(average - this.threshold));
             if (((average + this.threshold) >= filtRSSI && filtRSSI >= (average - this.threshold)) && inPlace) {
 //                System.out.println("in place: "+filtRSSI);
-                this.inPlaceData[this.inPlaceC] = data;
-                this.inPlaceC = (this.inPlaceC + 1) %10;
+//                this.inPlaceData[this.inPlaceC] = data;
+//                this.inPlaceC = (this.inPlaceC + 1) %10;
             }else if(!inPlace){
                 if ((average + this.threshold) >= filtRSSI && filtRSSI >= (average - this.threshold)) {
 //                    System.out.println("%%%%%%%%%%%%% put back in place: "+filtRSSI);
@@ -123,11 +124,11 @@ public class Item {
                             infoLaunched = false;
                         }
                     }
-                    this.inPlaceData[this.inPlaceC] = data;
-                    this.inPlaceC = (this.inPlaceC + 1) %10;
+//                    this.inPlaceData[this.inPlaceC] = data;
+//                    this.inPlaceC = (this.inPlaceC + 1) %10;
                 }else{
                     System.out.println("************ not in place: "+filtRSSI);
-                    if(data.getTime()-this.lastSeen >= 500 && !infoLaunched) {
+                    if(data.getTime()-this.lastSeen >= 0 && !infoLaunched) {
                         info = new ItemInfoScreen(this);
                         infoLaunched = true;
                     }
@@ -140,7 +141,7 @@ public class Item {
         }else{
 //            System.out.println("adding data else count: "+count);
             this.inPlaceData[this.inPlaceC] = data;
-            this.inPlaceC = (this.inPlaceC + 1) %10;
+            this.inPlaceC = (this.inPlaceC + 1) %20;
         }
         this.count++;
     }
