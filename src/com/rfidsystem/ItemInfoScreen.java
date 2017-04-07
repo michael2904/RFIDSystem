@@ -1,32 +1,23 @@
 package com.rfidsystem;
 
-import com.sun.awt.AWTUtilities;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
-import java.awt.GridLayout;
+import java.awt.GraphicsEnvironment;
 import java.awt.Image;
 import java.awt.Toolkit;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Timer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
-import javax.swing.border.Border;
-import javax.swing.border.CompoundBorder;
-import javax.swing.border.EmptyBorder;
 
 public class ItemInfoScreen {
 
@@ -36,19 +27,40 @@ public class ItemInfoScreen {
     private int timerTime = 1 * 60 * 1000;
 
     public ItemInfoScreen(Item item) {
+        Font fontTitle = null;
+        try {
+            fontTitle = Font.createFont(Font.TRUETYPE_FONT, getClass().getResource("resources/myFont2.ttf").openStream());
+            GraphicsEnvironment genv = GraphicsEnvironment.getLocalGraphicsEnvironment();
+            genv.registerFont(fontTitle);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        Font fontDescription = null;
+        try {
+            fontDescription = Font.createFont(Font.TRUETYPE_FONT, getClass().getResource("resources/myFont1.ttf").openStream());
+            GraphicsEnvironment genv = GraphicsEnvironment.getLocalGraphicsEnvironment();
+            genv.registerFont(fontDescription);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         //Hardcoded Values
-        String itemName = "Nike Air Force 1 Ultra Flyknit";
-        String itemDescription = "The Nike Air Force 1 Ultra Flyknit Men's Shoe weighs 50 percent less than the '82 hoops original thanks to its all-new, ultra-breathable Nike Flyknit upper. Strategically crafted Flyknit panels add dimension while remaining true to the AF1 design aesthetic.";
-        String itemPrice = "200";
-        String itemImage = "http://images.nike.com/is/image/DotCom/PDP_HERO/817420_003_A_PREM/air-force-1-ultra-flyknit-shoe.jpg";
-        
+        String itemName = "Luca Del Forte";
+        String itemDescription = "The monk strap gives this shoe a quality that's both casual and refined; all of the comfort of a slip-on without the formality of lace-ups.";
+        String itemPrice = "200 CAD       Available Quantity: 12";
+        String itemImage = "http://assets.stickpng.com/thumbs/580b57fbd9996e24bc43bf50.png";
+        String field1 = "Material Upper: Leather";
+        String field2 = "Lining Material: Cotton";
+        String field3 = "Sole: Rubber";
+        String fieldsString = "<br /><br />" + field1 + "<br />" + field2 + "<br />" + field3;
+
         /*
         String itemName = item.getName();
         String itemPrice = item.getPrice();
         String itemDescription = item.getDescription();
-        String itemImage = "http://images.nike.com/is/image/DotCom/PDP_HERO/817420_003_A_PREM/air-force-1-ultra-flyknit-shoe.jpg";
+        String itemImage = "http://assets.stickpng.com/thumbs/580b57fbd9996e24bc43bf50.png";
          */
-        
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         int ScreenWidth = (int) screenSize.getWidth();
         int ScreenHeight = (int) screenSize.getHeight();
@@ -62,10 +74,15 @@ public class ItemInfoScreen {
 
         //Load Title
         JLabel nameLabel = new JLabel(itemName);
-        nameLabel.setFont(new Font("Serif", Font.PLAIN, 50));
-        int titleHeight = (int) (0.2 * ScreenHeight);
+        if (fontTitle != null) {
+            nameLabel.setFont(fontTitle.deriveFont(Font.PLAIN, 90f));
+        } else {
+            nameLabel.setFont(new Font("Serif", Font.PLAIN, 50));
+        }
+        int titleHeight = (int) (0.15 * ScreenHeight);
         nameLabel.setPreferredSize(new Dimension(ScreenWidth, titleHeight));
         nameLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        nameLabel.setVerticalAlignment(SwingConstants.BOTTOM);
         panel.add(nameLabel);
 
         //Load Image URL
@@ -75,28 +92,39 @@ public class ItemInfoScreen {
         } catch (MalformedURLException ex) {
             Logger.getLogger(ItemInfoScreen.class.getName()).log(Level.SEVERE, null, ex);
         }
-        int imageHeight = (int) (0.4 * ScreenHeight);
-        ImageIcon imgIcon = new ImageIcon(new ImageIcon(img).getImage().getScaledInstance(imageHeight, imageHeight, Image.SCALE_DEFAULT));
+        int imageHeight = (int) (0.45 * ScreenHeight);
+        int imageHeightInternal = (int) (0.35 * ScreenHeight);
+        ImageIcon imgIcon = new ImageIcon(new ImageIcon(img).getImage().getScaledInstance(imageHeightInternal, imageHeightInternal, Image.SCALE_SMOOTH));
         JLabel picLabel = new JLabel(imgIcon);
         picLabel.setPreferredSize(new Dimension(ScreenWidth, imageHeight));
+        picLabel.setVerticalAlignment(SwingConstants.CENTER);
         panel.add(picLabel);
 
         //Load Description
-        JLabel descriptionLabel = new JLabel("<html><div style='text-align: center;'>" + itemDescription + "</div></html>");
-        descriptionLabel.setFont(new Font("Serif", Font.PLAIN, 30));
-        int descriptionHeight = (int) (0.2 * ScreenHeight);
+        JLabel descriptionLabel = new JLabel("<html><div style='text-align: center;'>" + itemDescription + fieldsString + "</div></html>");
+        if (fontDescription != null) {
+            descriptionLabel.setFont(fontDescription.deriveFont(Font.PLAIN, 30f));
+        } else {
+            descriptionLabel.setFont(new Font("Serif", Font.PLAIN, 30));
+        }
+        int descriptionHeight = (int) (0.3 * ScreenHeight);
         descriptionLabel.setPreferredSize(new Dimension(ScreenWidth, descriptionHeight));
+        descriptionLabel.setHorizontalAlignment(SwingConstants.RIGHT);
+        descriptionLabel.setVerticalAlignment(SwingConstants.TOP);
+        descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0, 250, 0, 250));
         panel.add(descriptionLabel);
 
         //Load Price
         JLabel priceLabel = new JLabel("Price: " + itemPrice);
-        priceLabel.setFont(new Font("Serif", Font.PLAIN, 50));
-        int priceHeight = (int) (0.2 * ScreenHeight);
+        if (fontDescription != null) {
+            priceLabel.setFont(fontDescription.deriveFont(Font.PLAIN, 40f));
+        } else {
+            priceLabel.setFont(new Font("Serif", Font.PLAIN, 50));
+        }
+        int priceHeight = (int) (0.1 * ScreenHeight);
         priceLabel.setPreferredSize(new Dimension(ScreenWidth, priceHeight));
-        priceLabel.setHorizontalAlignment(SwingConstants.RIGHT);
-        Border border = priceLabel.getBorder();
-        Border margin = new EmptyBorder(0, 0, 0, 100);
-        priceLabel.setBorder(new CompoundBorder(border, margin));
+        priceLabel.setVerticalAlignment(SwingConstants.TOP);
+        priceLabel.setHorizontalAlignment(SwingConstants.CENTER);
         panel.add(priceLabel);
 
         frame.add(panel);
@@ -104,55 +132,7 @@ public class ItemInfoScreen {
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(false);
-//        AWTUtilities.setWindowOpacity(frame, 0f);
-        //fadeIn();
-
         setWindowCloseTimer(timerTime);
-    }
-
-    private void fadeIn() {
-        new javax.swing.Timer(5, new ActionListener() {
-
-            public void actionPerformed(ActionEvent evt) {
-                boolean cancel = false;
-                float currentOpacity = AWTUtilities.getWindowOpacity(frame);
-                if (currentOpacity < 1f) {
-                    float newOpacity = currentOpacity + 0.02f;
-                    if (newOpacity > 1f) {
-                        newOpacity = 1f;
-                        cancel = true;
-                    }
-//                    AWTUtilities.setWindowOpacity(frame, newOpacity);
-                    if (cancel) {
-                        ((javax.swing.Timer) evt.getSource()).stop();
-                    }
-                }
-            }
-        }
-        ).start();
-    }
-
-    private void fadeOut() {
-        new javax.swing.Timer(5, new ActionListener() {
-
-            public void actionPerformed(ActionEvent evt) {
-                boolean cancel = false;
-                float currentOpacity = AWTUtilities.getWindowOpacity(frame);
-                if (currentOpacity > 0f) {
-                    float newOpacity = currentOpacity - 0.01f;
-                    if (newOpacity < 0) {
-                        newOpacity = 0;
-                        cancel = true;
-                    }
-//                    AWTUtilities.setWindowOpacity(frame, newOpacity);
-                    if (cancel) {
-                        ((javax.swing.Timer) evt.getSource()).stop();
-                        frame.dispose();
-                    }
-                }
-            }
-        }
-        ).start();
     }
 
     /**
