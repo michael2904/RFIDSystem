@@ -46,13 +46,13 @@ public class ItemInfoScreen {
         }
 
         //Hardcoded Values
-        String itemName = "Luca Del Forte";
-        String itemDescription = "The monk strap gives this shoe a quality that's both casual and refined; all of the comfort of a slip-on without the formality of lace-ups.";
-        String itemPrice = "200 CAD       Available Quantity: 12";
-        String itemImage = "http://assets.stickpng.com/thumbs/580b57fbd9996e24bc43bf50.png";
-        String field1 = "Material Upper: Leather";
-        String field2 = "Lining Material: Cotton";
-        String field3 = "Sole: Rubber";
+        String itemName = "CONVERSE CANVAS CTII OX";
+        String itemDescription = "CANVAS CTII OX";
+        String itemPrice = "Price: 85.00 CAD";
+        String itemImage = "http://media.littleburgundyshoes.com/product/CHRISTOPHER/98/CHRISTOPHER_98_RG_324.JPG";
+        String field1 = "Converse";
+        String field2 = "Sole: Gum Rubber";
+        String field3 = "Material: Canvas";
         String fieldsString = "<br /><br />" + field1 + "<br />" + field2 + "<br />" + field3;
 
         /*

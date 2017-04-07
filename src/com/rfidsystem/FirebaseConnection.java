@@ -24,8 +24,8 @@ public class FirebaseConnection {
 
     public FirebaseConnection(){
         System.out.println("This is a firebase connection");
-        String firebaseBaseUrl = "https://rfidsystem-cc897.firebaseio.com/";
-//        String firebaseBaseUrl = "https://designproject-bdb72.firebaseio.com/";
+//        String firebaseBaseUrl = "https://rfidsystem-cc897.firebaseio.com/";
+        String firebaseBaseUrl = "https://designproject-bdb72.firebaseio.com/";
         if( firebaseBaseUrl == null || firebaseBaseUrl.trim() == "" ) {
             throw new IllegalArgumentException( "Program-argument 'baseUrl' not found but required" );
         }
